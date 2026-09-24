@@ -1,0 +1,83 @@
+[
+  {
+    "law": "中华人民共和国宪法",
+    "file": "constitution.html",
+    "url": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230404_2966585.html",
+    "organization": "北京市卫生健康委员会（转载现行宪法全文）",
+    "sha256": "c89892a749815211b8ae36d313cbbe8c64acfe3e4bb91ceae00f10f841d6a151",
+    "downloadedAt": "2026-09-24"
+  },
+  {
+    "law": "中华人民共和国刑法",
+    "file": "criminal-law.html",
+    "url": "https://sjt.ln.gov.cn/sjt/sjzc/flfg/2026092410072061218/index.shtml",
+    "organization": "辽宁省审计厅（转载刑法正文）",
+    "sha256": "78520a0faa744b09693ec6b4146b56b27558b041506354b7e9de26e66c1d9fd5",
+    "downloadedAt": "2026-09-24"
+  },
+  {
+    "law": "中华人民共和国刑法",
+    "file": "criminal-amendment-12.pdf",
+    "url": "https://www.ssf.gov.cn/portal/rootfiles/2024/01/12/1706726549601819-1706726549770784.pdf",
+    "organization": "全国社会保障基金理事会（转载中华人民共和国主席令及刑法修正案（十二））",
+    "purpose": "更新刑法第165、166、169、387、390、391、393条",
+    "sha256": "3a88d0c03a6e2172e583450f01698678ff7e17e1610d689a77047a3563b7676f",
+    "downloadedAt": "2026-09-24"
+  },
+  {
+    "law": "中华人民共和国行政诉讼法",
+    "file": "administrative-litigation.html",
+    "url": "https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250306_1958903.html",
+    "organization": "国家统计局（转载现行全文）",
+    "sha256": "91efd63066593485d2094220445d7504bf7c492c3ebe211b6b4202717568afd2",
+    "downloadedAt": "2026-09-24"
+  },
+  {
+    "law": "中华人民共和国行政处罚法",
+    "file": "administrative-penalty.html",
+    "url": "https://www.beijing.gov.cn/zhengce/zhengcefagui/202102/t20210218_2283193.html",
+    "organization": "北京市人民政府（转载全国人大常委会现行文本）",
+    "sha256": "d8041843fbce78011b9dda58c0b31b3f918347656a56de3a2a4a96d6cc7ebf2d",
+    "downloadedAt": "2026-09-24"
+  },
+  {
+    "law": "中华人民共和国反垄断法",
+    "file": "anti-monopoly.html",
+    "url": "https://xz.spb.gov.cn/xzyzglj/c100065/c100066/202307/12ac5232366f4728801efb34105e37f4.shtml",
+    "organization": "国家邮政局系统政府网站（转载2022年修订全文）",
+    "sha256": "a7ebf8924ab08b4059349490fd93d669ba4e59a1ac79347b5661fb2de6f467e5",
+    "downloadedAt": "2026-09-24"
+  },
+  {
+    "law": "中华人民共和国反不正当竞争法",
+    "file": "anti-unfair-competition.html",
+    "url": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=103015",
+    "organization": "商务部全球法规网",
+    "sha256": "ecbd5a7eeb79a8ca9eb8a16dbb6bcb4dc96cb2e6290c011128f417e77e87b284",
+    "downloadedAt": "2026-09-24"
+  },
+  {
+    "law": "中华人民共和国消费者权益保护法",
+    "file": "consumer-rights.html",
+    "url": "https://scjgj.beijing.gov.cn/cxfw/flfgcxfw/xfzqybhl/202006/t20200618_1928074.html",
+    "organization": "北京市市场监督管理局（转载现行全文）",
+    "sha256": "b85dfd05a9cd85ab8691008f220337e693394692dfc419f8e2977cd31122ea5f",
+    "downloadedAt": "2026-09-24"
+  },
+  {
+    "law": "中华人民共和国劳动法",
+    "file": "labor-law.html",
+    "url": "https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/201912/t20191219_1309776.html",
+    "organization": "北京市人民政府（转载全国人大常委会现行文本）",
+    "sha256": "7291555b26fa070829abe9d090c32905757ada1774e6c6c6e0219ab67e042564",
+    "downloadedAt": "2026-09-24"
+  },
+  {
+    "law": "中华人民共和国社会保险法",
+    "file": "social-insurance.html",
+    "url": "https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/201901/t20190117_780532.html",
+    "organization": "北京市人民政府（转载全国人大常委会现行文本）",
+    "sha256": "2b3c56cd023225108ec948f3b308e073819a11fa69e67b25d85b488fe7884f91",
+    "downloadedAt": "2026-09-24"
+  }
+]

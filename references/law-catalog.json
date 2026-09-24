@@ -1,0 +1,187 @@
+[
+  {
+    "name": "中华人民共和国民法典",
+    "slug": "civil-code",
+    "aliases": [
+      "民法典",
+      "民法"
+    ],
+    "articleCount": 1260,
+    "version": "2020年5月28日通过，2021年1月1日起施行",
+    "files": [
+      "references/民法典/01-总则编.md",
+      "references/民法典/02-物权编.md",
+      "references/民法典/03-合同编.md",
+      "references/民法典/04-人格权编.md",
+      "references/民法典/05-婚姻家庭编.md",
+      "references/民法典/06-继承编.md",
+      "references/民法典/07-侵权责任编.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国宪法",
+    "slug": "constitution",
+    "aliases": [
+      "宪法",
+      "国家根本法",
+      "公民基本权利",
+      "国家机构"
+    ],
+    "articleCount": 143,
+    "baseArticleMax": 143,
+    "version": "1982年通过，历经1988、1993、1999、2004、2018年修正",
+    "effective": "现行文本（2018年修正）",
+    "files": [
+      "references/法律法规/中华人民共和国宪法.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国刑法",
+    "slug": "criminal-law",
+    "aliases": [
+      "刑法",
+      "犯罪",
+      "刑事责任",
+      "量刑",
+      "刑罚"
+    ],
+    "articleCount": 505,
+    "baseArticleMax": 452,
+    "version": "1997年修订文本，整合至刑法修正案（十一），并按刑法修正案（十二）更新7条",
+    "effective": "刑法修正案（十二）自2024年3月1日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国刑法.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国行政诉讼法",
+    "slug": "administrative-litigation-law",
+    "aliases": [
+      "行政诉讼法",
+      "行政诉讼",
+      "民告官",
+      "行政行为",
+      "行政案件"
+    ],
+    "articleCount": 103,
+    "baseArticleMax": 103,
+    "version": "1989年通过，2014年、2017年修正",
+    "effective": "现行文本（2017年修正）",
+    "files": [
+      "references/法律法规/中华人民共和国行政诉讼法.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国行政处罚法",
+    "slug": "administrative-penalty-law",
+    "aliases": [
+      "行政处罚法",
+      "行政处罚",
+      "听证",
+      "执法",
+      "罚款"
+    ],
+    "articleCount": 86,
+    "baseArticleMax": 86,
+    "version": "1996年通过，2009年、2017年修正，2021年修订",
+    "effective": "2021年7月15日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国行政处罚法.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国反垄断法",
+    "slug": "anti-monopoly-law",
+    "aliases": [
+      "反垄断法",
+      "垄断协议",
+      "市场支配地位",
+      "经营者集中",
+      "公平竞争"
+    ],
+    "articleCount": 70,
+    "baseArticleMax": 70,
+    "version": "2007年通过，2022年修正",
+    "effective": "2022年8月1日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国反垄断法.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国反不正当竞争法",
+    "slug": "anti-unfair-competition-law",
+    "aliases": [
+      "反不正当竞争法",
+      "不正当竞争",
+      "商业秘密",
+      "商业贿赂",
+      "虚假宣传",
+      "平台竞争"
+    ],
+    "articleCount": 41,
+    "baseArticleMax": 41,
+    "version": "1993年通过，2017年第一次修订，2019年修正，2025年第二次修订",
+    "effective": "2025年10月15日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国反不正当竞争法.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国消费者权益保护法",
+    "slug": "consumer-rights-law",
+    "aliases": [
+      "消费者权益保护法",
+      "消保法",
+      "消费者",
+      "七日无理由退货",
+      "三倍赔偿",
+      "个人信息"
+    ],
+    "articleCount": 63,
+    "baseArticleMax": 63,
+    "version": "1993年通过，2009年、2013年修正",
+    "effective": "现行文本（2013年第二次修正）",
+    "files": [
+      "references/法律法规/中华人民共和国消费者权益保护法.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国劳动法",
+    "slug": "labor-law",
+    "aliases": [
+      "劳动法",
+      "劳动关系",
+      "工资",
+      "工时",
+      "休假",
+      "劳动争议"
+    ],
+    "articleCount": 107,
+    "baseArticleMax": 107,
+    "version": "1994年通过，2009年、2018年修正",
+    "effective": "现行文本（2018年第二次修正）",
+    "files": [
+      "references/法律法规/中华人民共和国劳动法.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国社会保险法",
+    "slug": "social-insurance-law",
+    "aliases": [
+      "社会保险法",
+      "社保法",
+      "养老保险",
+      "医疗保险",
+      "工伤保险",
+      "失业保险",
+      "生育保险"
+    ],
+    "articleCount": 98,
+    "baseArticleMax": 98,
+    "version": "2010年通过，2018年修正",
+    "effective": "现行文本（2018年修正）",
+    "files": [
+      "references/法律法规/中华人民共和国社会保险法.md"
+    ]
+  }
+]
