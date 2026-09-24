@@ -1,6 +1,6 @@
-# 中国主要法律检索 Skill
+# chinalaw-waylon-expert
 
-这是一个供 Codex 等支持本地 Skill 的 AI 助手使用的中文法律检索技能。仓库保留 `china-civil-code-expert` 名称以兼容已有安装，现已从单一《民法典》扩展为十部法律的统一知识库。
+这是一个供 Codex 等支持本地 Skill 的 AI 助手使用的中文法律检索技能，收录十部法律的统一知识库。
 
 ## 已收录法律
 
@@ -24,7 +24,7 @@
 在 Codex 中输入以下提示词：
 
 ```text
-请使用 skill-installer 从 GitHub 仓库 https://github.com/xiezhicong3288-wq/china-civil-code-expert 安装这个 Skill。
+请使用 skill-installer 从 GitHub 仓库 https://github.com/xiezhicong3288-wq/chinalaw-waylon-expert 安装这个 Skill。
 ```
 
 也可以下载 ZIP 或克隆仓库，再将完整目录安装到工具的 Skill 目录。必须保留 `SKILL.md`、`references/` 和 `scripts/` 的相对位置；只复制 `SKILL.md` 无法使用法律原文库。
@@ -32,7 +32,7 @@
 ## 使用示例
 
 ```text
-请使用 china-civil-code-expert 查询刑法第390条，引用原文并解释。
+请使用 chinalaw-waylon-expert 查询刑法第390条，引用原文并解释。
 请检索“七日无理由退货”涉及哪些消费者权益保护法条文。
 公司未缴社会保险，我需要保存哪些证据？请先检索原文再分析。
 行政处罚决定可以怎样申请救济？请区分行政处罚法和行政诉讼法。
@@ -60,4 +60,4 @@
 
 ## 授权说明
 
-仓库尚未指定开源许可证。公开可见不等于授予任意修改、再分发或商业使用的许可；这些使用方式请联系仓库作者确认。
+本仓库公开可见，但未指定开源许可证，因此不属于获得开源许可授权的软件。除适用法律或平台规则另有规定外，复制、修改、再分发或商业使用前请联系仓库作者取得许可。
