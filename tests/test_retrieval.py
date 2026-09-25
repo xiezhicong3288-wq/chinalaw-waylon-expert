@@ -12,6 +12,7 @@ from search_law import article_text, choose_laws, file_articles, load_json
 from audit_sources import audit as audit_sources
 from new_matter import create_workspace
 from search_cases import card_text, load_catalog as load_case_catalog
+from audit_matter import audit as audit_matter
 
 
 class RetrievalTests(unittest.TestCase):
@@ -121,9 +122,50 @@ class RetrievalTests(unittest.TestCase):
             output = Path(temp) / "matter"
             markdown, data = create_workspace(output, "测试案件")
             self.assertIn("要件—事实—证据矩阵", markdown.read_text(encoding="utf-8"))
-            self.assertEqual(json.loads(data.read_text(encoding="utf-8"))["title"], "测试案件")
+            document = json.loads(data.read_text(encoding="utf-8"))
+            self.assertEqual(document["title"], "测试案件")
+            self.assertEqual(document["schemaVersion"], 2)
+            self.assertIn("contradictions", document)
             with self.assertRaises(SystemExit):
                 create_workspace(output, "覆盖")
+
+    def test_new_matter_audit_reports_preparation_gaps(self):
+        with tempfile.TemporaryDirectory() as temp:
+            _, data = create_workspace(Path(temp) / "matter", "待准备案件")
+            errors, gaps = audit_matter(json.loads(data.read_text(encoding="utf-8")))
+            self.assertEqual(errors, [])
+            self.assertIn("尚未建立证据来源、原件、完整性和证明目的台账", gaps)
+            self.assertIn("尚未完成送达、起算事件和期限核查", gaps)
+
+    def test_matter_audit_rejects_duplicate_or_invalid_ids(self):
+        with tempfile.TemporaryDirectory() as temp:
+            _, data = create_workspace(Path(temp) / "matter", "编号审计")
+            document = json.loads(data.read_text(encoding="utf-8"))
+            document["facts"] = [{"id": "F01"}, {"id": "F01"}]
+            errors, _ = audit_matter(document)
+            self.assertIn("facts存在重复id", errors)
+
+    def test_matter_audit_checks_evidence_provenance_fields(self):
+        with tempfile.TemporaryDirectory() as temp:
+            _, data = create_workspace(Path(temp) / "matter", "证据字段审计")
+            document = json.loads(data.read_text(encoding="utf-8"))
+            document["evidence"] = [{"id": "E01", "name": "聊天截图"}]
+            errors, _ = audit_matter(document)
+            joined = "\n".join(errors)
+            self.assertIn("originalStatus", joined)
+            self.assertIn("completeness", joined)
+            self.assertIn("source", joined)
+
+    def test_matter_audit_cli_uses_gap_exit_code(self):
+        with tempfile.TemporaryDirectory() as temp:
+            _, data = create_workspace(Path(temp) / "matter", "退出码审计")
+            result = subprocess.run(
+                [sys.executable, "-X", "utf8", str(ROOT / "scripts/audit_matter.py"), "--input", str(data)],
+                capture_output=True, text=True, encoding="utf-8",
+            )
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("待补工作", result.stdout)
+            self.assertIn("尚未评估保全、财产线索和实际执行路径", result.stdout)
 
     def test_matter_workspace_refuses_git_repo_by_default(self):
         with tempfile.TemporaryDirectory() as temp:

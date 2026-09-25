@@ -111,6 +111,16 @@ def main() -> None:
     failure_numbers = [int(value) for value in re.findall(r"^(\d+)\. \*\*", failure_text, re.MULTILINE)]
     assert failure_numbers == list(range(1, 19)), "expected 18 consecutively numbered failure patterns"
 
+    practice_files = {
+        "README.md", "matter-triage.md", "evidence-engineering.md", "hearing-preparation.md",
+        "settlement-execution.md", "appeal-review.md", "high-risk-matters.md",
+    }
+    practice_dir = ROOT / "references" / "practice"
+    assert {path.name for path in practice_dir.glob("*.md")} == practice_files, "practice workflow set mismatch"
+    for path in practice_dir.glob("*.md"):
+        assert len(path.read_text(encoding="utf-8")) >= 200, f"practice workflow is unexpectedly short: {path.name}"
+    assert (ROOT / "scripts" / "audit_matter.py").is_file(), "missing matter audit tool"
+
     criminal = (ROOT / "references" / "法律法规" / "中华人民共和国刑法.md").read_text(encoding="utf-8")
     assert "有下列情形之一的，从重处罚" in criminal
     assert "（七）将违法所得用于行贿的。" in criminal
@@ -135,7 +145,7 @@ def main() -> None:
 
     law_count = sum(item.get("documentType", "法律") == "法律" for item in catalog)
     interpretation_count = len(catalog) - law_count
-    print(f"知识库结构校验通过：{law_count}部法律、{interpretation_count}部司法解释，{len(index):,}条完整可提取记录，{len(cases)}个案例卡、{len(archetypes)}类案件原型、{len(failure_numbers)}类失败模式；不代表法律适用正确性认证。")
+    print(f"知识库结构校验通过：{law_count}部法律、{interpretation_count}部司法解释，{len(index):,}条完整可提取记录，{len(cases)}个案例卡、{len(archetypes)}类案件原型、{len(failure_numbers)}类失败模式、{len(practice_files)}份办案实务工作流；不代表法律适用正确性认证。")
 
 
 if __name__ == "__main__":

@@ -15,6 +15,7 @@ description: 中国法律条文检索、案件争点、程序期限、证据与�
 
 - 查具体条文：检索目录与统一索引，读取原文文件。
 - 真实纠纷、重大案件或诉讼策略：读取 [案件与证据分析](references/workflows/case-analysis.md)。
+- 用户要求“按律师办案”“全案策略”“庭审准备”“和解执行”或“复盘上诉”：先读取 [办案实务入口](references/practice/README.md)，再按阶段加载对应实务文件。
 - 期限、送达、上诉、复议、仲裁或执行：同时读取 [程序期限核验](references/workflows/deadline-check.md) 及对应程序法。
 - 事实跨年份、新旧法衔接或有效性存疑：读取 [版本核验](references/workflows/version-check.md)。
 - 类案研究或用户询问“经验”：读取 [案例检索](references/workflows/case-research.md)、[案例目录](references/cases/catalog.json) 和 [案例经验库](references/experience/README.md)，按争点选择案例卡并做反事实比较。
@@ -52,6 +53,18 @@ python scripts/new_matter.py --output <案件目录> --title <案件名称>
 8. **给出分层结论。** 使用“材料直接支持”“较强推断”“存在争议”“资料不足”标明可信度，并列出会改变结论的事实。
 9. **输出行动方案。** 按紧迫性列出保全权利、补证、沟通谈判、程序行动和专业复核事项；不作必然胜诉或必然定罪承诺。
 
+## 深度办案模式
+
+用户提供具体纠纷并要求全面办理时，额外执行以下闭环：
+
+1. 从用户要实现的结果反推主位、备位请求和实体、程序门槛。
+2. 对事实、证据、争点、期限和行动分别编号；每个核心结论必须能回指材料与依据。
+3. 建立证据来源与完整性台账、矛盾表和对方控制证据清单，不隐藏不利材料。
+4. 预演对方最快击穿本案的三个论点，并说明哪项新事实会改变当前策略。
+5. 分开评估责任成立、金额认定、程序可行和实际执行，不用单一胜诉百分比代替分析。
+6. 按当前阶段形成可直接使用的访谈问题、补证清单、庭审争点包、和解条款或裁判复盘表。
+7. 在交付前运行案件工作台审计；结构完整不等于法律结论正确，仍须人工核验原始材料。
+
 ## 检索规则
 
 先从 [法律目录](references/law-catalog.json) 确认名称、别名、版本与路径，再在 [统一索引](references/law-index.json) 按 `lawSlug`、`article`、`articleSuffix` 定位。必须读取索引指向的 Markdown 原文，不能凭记忆补写。
@@ -87,9 +100,11 @@ python scripts/search_law.py --keyword 举证责任 --limit 10
 - `references/民法典/`、`references/法律法规/`、`references/司法解释/`：结构化原文。
 - `references/cases/`：官方来源核验的案例学习卡，不是完整案卷。
 - `references/experience/`：案件原型、常见失败模式和案例经验迁移方法。
+- `references/practice/`：案件体检、证据工程、庭审、和解执行、上诉复盘和高风险案件控制。
 - `references/常用法律文书/`：备忘录、证据目录和案件时间线模板。
 - `scripts/search_law.py`：确定性检索。
 - `scripts/search_cases.py`：按编号、法域、标签和关键词检索案例卡。
+- `scripts/audit_matter.py`：检查案件工作台的结构错误和准备缺口，不输出胜诉分数。
 - `scripts/audit_sources.py`：来源元数据审计；加 `--online` 可检查网址可达性。
 - `scripts/validate_knowledge_base.py`：目录、索引、原文和关键版本一致性检查。
 - `evals/` 与 `tests/`：行为评估和回归测试。

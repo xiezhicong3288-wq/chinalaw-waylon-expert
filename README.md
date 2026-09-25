@@ -31,6 +31,12 @@
 
 `references/experience/` 另含10类案件原型和18类常见失败模式。这里的经验来自公开案例归纳，不冒充亲历办案经验。
 
+## 办案能力升级
+
+第四阶段增加完整的案件体检和诉讼准备闭环：从救济目标反推请求及要件，建立证据来源、完整性与矛盾台账，预演对方最强阻断点，并分别处理庭审、和解、保全执行、裁判复盘及民刑行交叉风险。
+
+`scripts/new_matter.py` 现在生成第二版结构化案件工作台；`scripts/audit_matter.py` 可以发现尚未填写的事实、证据、期限、争点、风险和行动项。审计只检查准备完整性，不计算胜诉率。
+
 ## 一句话安装
 
 在 Codex 中输入：
@@ -55,6 +61,7 @@
 
 ```text
 python scripts/new_matter.py --output C:\path\to\private-matter --title 示例案件
+python scripts/audit_matter.py --input C:\path\to\private-matter\matter.json
 ```
 
 脚本默认拒绝在 Git 仓库内创建工作台；只有明确确认仓库权限和材料脱敏后，才使用 `--allow-git-repo`。
@@ -69,7 +76,7 @@ python -m unittest discover -s tests -v
 
 `audit_sources.py --online` 会检查来源网址可达性。自动测试验证数据结构和检索行为，不等于律师审阅或个案法律意见。
 
-当前数据、工具和独立前向测试见 [第三阶段验证记录](evals/reports/2026-09-25-phase3.md)；[第二阶段记录](evals/reports/2026-09-25-phase2.md)保留为历史基线。
+当前数据、工具和独立前向测试见 [第四阶段验证记录](evals/reports/2026-09-25-phase4.md)；[第三阶段记录](evals/reports/2026-09-25-phase3.md)保留为案例经验升级基线。
 
 ## 文件结构
 
@@ -82,7 +89,8 @@ python -m unittest discover -s tests -v
 - `references/常用法律文书/`：法律分析备忘录、证据目录和案件时间线模板。
 - `references/cases/`：12个最高人民法院指导案例学习卡，非完整案卷。
 - `references/experience/`：案件原型、常见失败模式和经验迁移方法。
-- `scripts/`：法律与案例检索、校验、来源审计和案件工作台工具。
+- `references/practice/`：案件体检、证据工程、庭审、和解执行、上诉复盘和高风险案件工作流。
+- `scripts/`：法律与案例检索、校验、来源审计、案件工作台和准备缺口审计工具。
 - `tests/` 与 `evals/`：回归测试和行为评估材料。
 
 ## 数据与边界
