@@ -7,6 +7,9 @@ import json
 import re
 from collections import Counter
 from pathlib import Path
+from urllib.parse import urlparse
+
+from search_law import file_articles
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,13 +48,31 @@ def main() -> None:
         for relative in law["files"]:
             assert (ROOT / relative).is_file(), f"missing file: {relative}"
 
-    file_cache: dict[str, str] = {}
     for item in index:
-        text = file_cache.setdefault(item["file"], (ROOT / item["file"]).read_text(encoding="utf-8"))
-        heading = re.escape(f"**{item['articleCn']}**")
-        assert re.search(rf"(?m)^{heading}(?:\s|$)", text), (
-            f"missing heading: {item['law']} {item['articleCn']} in {item['file']}"
+        body = file_articles(item["file"]).get(item["articleCn"])
+        assert body, (
+            f"missing or empty article: {item['law']} {item['articleCn']} in {item['file']}"
         )
+    for relative in {item["file"] for item in index}:
+        indexed = {item["articleCn"] for item in index if item["file"] == relative}
+        assert indexed == set(file_articles(relative)), f"unindexed article or incorrect index: {relative}"
+
+    for law in catalog:
+        maximum = law.get("baseArticleMax", law["articleCount"])
+        bases = {item["article"] for item in index if item["lawSlug"] == law["slug"] and item["articleSuffix"] is None}
+        assert bases == set(range(1, maximum + 1)), f"base article gaps: {law['name']}"
+
+    for relative in re.findall(r"\]\(([^)]+)\)", skill):
+        if "://" not in relative:
+            assert (ROOT / relative).is_file(), f"missing routed reference: {relative}"
+
+    cases = load("cases/catalog.json")
+    assert len({case["id"] for case in cases}) == len(cases), "duplicate case id"
+    for case in cases:
+        assert all(case.get(key) for key in ("id", "title", "caseNumber", "court", "decisionDate", "checkedAt", "verification", "file", "source"))
+        address = urlparse(case["source"])
+        assert address.scheme == "https" and address.hostname and address.hostname.endswith(".court.gov.cn")
+        assert (ROOT / case["file"]).is_file(), f"missing case card: {case['id']}"
 
     criminal = (ROOT / "references" / "法律法规" / "中华人民共和国刑法.md").read_text(encoding="utf-8")
     assert "有下列情形之一的，从重处罚" in criminal
@@ -65,7 +86,7 @@ def main() -> None:
     constitution = (ROOT / "references" / "法律法规" / "中华人民共和国宪法.md").read_text(encoding="utf-8")
     assert "## 序言" in constitution and "**第一百四十三条**" in constitution
 
-    print("知识库校验通过：10部法律，2,476条索引记录。")
+    print(f"知识库结构校验通过：10部法律，2,476条完整可提取记录，{len(cases)}个案例卡；不代表法律适用正确性认证。")
 
 
 if __name__ == "__main__":

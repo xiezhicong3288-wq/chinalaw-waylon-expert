@@ -1,0 +1,40 @@
+[
+  {
+    "id": "GC15",
+    "title": "徐工集团工程机械股份有限公司诉成都川交工贸有限责任公司等买卖合同纠纷案",
+    "type": "最高人民法院指导案例15号",
+    "caseNumber": "（2011）苏商终字第0107号",
+    "court": "江苏省高级人民法院",
+    "decisionDate": "2011-10-19",
+    "source": "https://www.court.gov.cn/shenpan/xiangqing/13321.html",
+    "checkedAt": "2026-09-25",
+    "verification": "已核对官方案例发布资料；当前指导效力使用前复查",
+    "file": "references/cases/GC15.md",
+    "tags": [
+      "关联公司",
+      "人格混同",
+      "证据",
+      "连带责任"
+    ]
+  },
+  {
+    "id": "GC273",
+    "title": "浙江吉某控股集团有限公司、浙江吉某汽车研究院有限公司诉威某汽车制造温州有限公司等侵害技术秘密纠纷案",
+    "type": "最高人民法院指导性案例273号",
+    "caseNumber": "（2023）最高法知民终1590号",
+    "court": "最高人民法院",
+    "decisionDate": "2024-04-25",
+    "source": "https://ipc.court.gov.cn/upload/file/2026/04/14/17/07/20260414170714_79598.pdf",
+    "checkedAt": "2026-09-25",
+    "verification": "已核对官方案例PDF；当前指导效力使用前复查",
+    "file": "references/cases/GC273.md",
+    "tags": [
+      "技术秘密",
+      "商业秘密",
+      "举证",
+      "停止侵害",
+      "执行",
+      "新旧法"
+    ]
+  }
+]
