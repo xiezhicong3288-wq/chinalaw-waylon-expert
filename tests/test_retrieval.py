@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from search_law import article_text, choose_laws, file_articles, load_json
 from audit_sources import audit as audit_sources
 from new_matter import create_workspace
+from search_cases import card_text, load_catalog as load_case_catalog
 
 
 class RetrievalTests(unittest.TestCase):
@@ -25,6 +26,10 @@ class RetrievalTests(unittest.TestCase):
 
     def cli(self, *args):
         return subprocess.run([sys.executable, "-X", "utf8", str(ROOT / "scripts/search_law.py"), *args],
+                              capture_output=True, text=True, encoding="utf-8")
+
+    def case_cli(self, *args):
+        return subprocess.run([sys.executable, "-X", "utf8", str(ROOT / "scripts/search_cases.py"), *args],
                               capture_output=True, text=True, encoding="utf-8")
 
     def test_exact_civil_article(self):
@@ -134,6 +139,29 @@ class RetrievalTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("检索扩展", result.stdout)
         self.assertIn("第九十条", result.stdout)
+
+    def test_case_catalog_and_domain_search(self):
+        catalog = load_case_catalog()
+        self.assertEqual(len(catalog), 12)
+        result = self.case_cli("--domain", "劳动")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("GC179", result.stdout)
+        self.assertIn("GC180", result.stdout)
+        self.assertIn("GC184", result.stdout)
+
+    def test_case_search_uses_decisive_facts(self):
+        result = self.case_cli("--keyword", "事故认定书", "--keyword", "因果关系")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("GC269", result.stdout)
+        self.assertIn("仅用于本地检索排序", result.stdout)
+
+    def test_case_search_rejects_missing_or_unknown_query(self):
+        self.assertNotEqual(self.case_cli().returncode, 0)
+        self.assertNotEqual(self.case_cli("--id", "GC999999").returncode, 0)
+
+    def test_case_path_cannot_escape_root(self):
+        with self.assertRaises(ValueError):
+            card_text("../outside.md")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 ---
 name: chinalaw-waylon-expert
-description: 中国法律条文检索、案件争点、程序期限、证据与诉讼策略分析。收录十六部法律、一部民事证据司法解释及官方案例卡。用于民商事、公司、劳动、行政、刑事、仲裁和消费者纠纷；重大案件须核查双方论点、证据链、程序、版本与执行条件，不虚构专家身份或亲历经验。
+description: 中国法律条文检索、案件争点、程序期限、证据与诉讼策略分析。收录十六部法律、一部民事证据司法解释及十二个官方指导案例卡。用于民商事、公司、劳动、行政、刑事、仲裁和消费者纠纷；重大案件须核查双方论点、证据链、程序、版本与执行条件，不虚构专家身份或亲历经验。
 ---
 
 # Waylon 中国法律案件工作台
@@ -17,7 +17,7 @@ description: 中国法律条文检索、案件争点、程序期限、证据与�
 - 真实纠纷、重大案件或诉讼策略：读取 [案件与证据分析](references/workflows/case-analysis.md)。
 - 期限、送达、上诉、复议、仲裁或执行：同时读取 [程序期限核验](references/workflows/deadline-check.md) 及对应程序法。
 - 事实跨年份、新旧法衔接或有效性存疑：读取 [版本核验](references/workflows/version-check.md)。
-- 类案研究：读取 [案例检索](references/workflows/case-research.md) 与 [案例目录](references/cases/catalog.json)，按争点选择案例卡。
+- 类案研究或用户询问“经验”：读取 [案例检索](references/workflows/case-research.md)、[案例目录](references/cases/catalog.json) 和 [案例经验库](references/experience/README.md)，按争点选择案例卡并做反事实比较。
 - 用户明确要求更新、复盘或升级本 Skill：读取 [持续改进](references/workflows/improvement.md) 与 [评估规程](evals/README.md)，提出候选修改、验证、记录局限并保留可回滚版本。
 
 需要长期整理案件时，可在用户指定的私有目录创建工作台：
@@ -86,8 +86,10 @@ python scripts/search_law.py --keyword 举证责任 --limit 10
 - [来源清单](references/source-manifest.json)：公开来源、下载日期与文件哈希。
 - `references/民法典/`、`references/法律法规/`、`references/司法解释/`：结构化原文。
 - `references/cases/`：官方来源核验的案例学习卡，不是完整案卷。
+- `references/experience/`：案件原型、常见失败模式和案例经验迁移方法。
 - `references/常用法律文书/`：备忘录、证据目录和案件时间线模板。
 - `scripts/search_law.py`：确定性检索。
+- `scripts/search_cases.py`：按编号、法域、标签和关键词检索案例卡。
 - `scripts/audit_sources.py`：来源元数据审计；加 `--online` 可检查网址可达性。
 - `scripts/validate_knowledge_base.py`：目录、索引、原文和关键版本一致性检查。
 - `evals/` 与 `tests/`：行为评估和回归测试。
@@ -95,7 +97,7 @@ python scripts/search_law.py --keyword 举证责任 --limit 10
 ## 边界
 
 - 法律资料快照整理于2026年9月24日至25日，不会自动更新；实际案件必须核验此后修法、司法解释、指导性案例、会议纪要、行政法规、部门规章、地方规则和受理机关实践。
-- 当前案例样本很少，不能声称具有数十年亲历案例经验。案例相似不等于裁判结果相同。
+- 当前12个案例样本仍不足以覆盖全国裁判实践，不能声称具有数十年亲历案例经验。案例相似不等于裁判结果相同。
 - 刑事、重大财产、公司控制权、人身自由和即将到期事项应提示尽快让具备中国执业资格的律师基于完整案卷复核。
 - 案件材料默认留在用户指定的工作区，不写入公开仓库。联网检索仅发送必要的非敏感关键词；个人信息和商业秘密先脱敏。
 - “持续改进”只在用户授权的更新任务中执行，不修改底层模型，也不在会话结束后自行运行。

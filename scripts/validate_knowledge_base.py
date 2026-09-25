@@ -80,12 +80,36 @@ def main() -> None:
             assert (ROOT / relative).is_file(), f"missing routed reference: {relative}"
 
     cases = load("cases/catalog.json")
+    assert len(cases) == 12, f"expected 12 verified case cards, got {len(cases)}"
     assert len({case["id"] for case in cases}) == len(cases), "duplicate case id"
     for case in cases:
-        assert all(case.get(key) for key in ("id", "title", "caseNumber", "court", "decisionDate", "checkedAt", "verification", "file", "source"))
+        assert all(case.get(key) for key in (
+            "id", "title", "type", "domain", "caseNumber", "court", "decisionDate",
+            "checkedAt", "verification", "file", "source", "issues", "decisiveFacts", "limits", "tags",
+        ))
+        assert re.fullmatch(r"GC\d+", case["id"]), f"invalid case id: {case['id']}"
+        assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", case["decisionDate"]), f"invalid decision date: {case['id']}"
+        assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", case["checkedAt"]), f"invalid checked date: {case['id']}"
         address = urlparse(case["source"])
         assert address.scheme == "https" and address.hostname and address.hostname.endswith(".court.gov.cn")
         assert (ROOT / case["file"]).is_file(), f"missing case card: {case['id']}"
+        assert Path(case["file"]).stem == case["id"], f"case file/id mismatch: {case['id']}"
+        card = (ROOT / case["file"]).read_text(encoding="utf-8")
+        assert case["source"] in card, f"case card omits official source: {case['id']}"
+
+    archetypes = load("experience/case-archetypes.json")
+    assert len(archetypes) == 10 and len({item["id"] for item in archetypes}) == 10
+    case_ids = {case["id"] for case in cases}
+    for archetype in archetypes:
+        assert all(archetype.get(key) for key in (
+            "id", "name", "domains", "triggers", "decisiveQuestions", "evidencePriorities",
+            "opposingArguments", "proceduralRisks", "linkedCases",
+        ))
+        assert set(archetype["linkedCases"]) <= case_ids, f"unknown linked case: {archetype['id']}"
+
+    failure_text = (ROOT / "references" / "experience" / "failure-patterns.md").read_text(encoding="utf-8")
+    failure_numbers = [int(value) for value in re.findall(r"^(\d+)\. \*\*", failure_text, re.MULTILINE)]
+    assert failure_numbers == list(range(1, 19)), "expected 18 consecutively numbered failure patterns"
 
     criminal = (ROOT / "references" / "法律法规" / "中华人民共和国刑法.md").read_text(encoding="utf-8")
     assert "有下列情形之一的，从重处罚" in criminal
@@ -111,7 +135,7 @@ def main() -> None:
 
     law_count = sum(item.get("documentType", "法律") == "法律" for item in catalog)
     interpretation_count = len(catalog) - law_count
-    print(f"知识库结构校验通过：{law_count}部法律、{interpretation_count}部司法解释，{len(index):,}条完整可提取记录，{len(cases)}个案例卡；不代表法律适用正确性认证。")
+    print(f"知识库结构校验通过：{law_count}部法律、{interpretation_count}部司法解释，{len(index):,}条完整可提取记录，{len(cases)}个案例卡、{len(archetypes)}类案件原型、{len(failure_numbers)}类失败模式；不代表法律适用正确性认证。")
 
 
 if __name__ == "__main__":
