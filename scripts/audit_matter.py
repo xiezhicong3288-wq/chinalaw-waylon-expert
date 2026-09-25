@@ -29,6 +29,41 @@ ITEM_REQUIRED_KEYS = {
     "actions": {"id", "action", "priority", "status"},
 }
 
+COMMERCIAL_FIELDS = {
+    "transactionStructure", "contractDocuments", "authorityAndSeals", "performanceLedger",
+    "paymentAndInvoices", "noticesAndChanges", "securityAndPriority",
+    "corporateAndRelatedParties", "damagesAndSetoff", "assetsAndInsolvency",
+    "negotiationAndExit",
+}
+
+COMMERCIAL_LABELS = {
+    "transactionStructure": "交易结构",
+    "contractDocuments": "合同文件链",
+    "authorityAndSeals": "授权与印章",
+    "performanceLedger": "逐笔履行台账",
+    "paymentAndInvoices": "付款、发票与对账",
+    "noticesAndChanges": "通知、变更与解除",
+    "securityAndPriority": "担保、公示与优先顺位",
+    "corporateAndRelatedParties": "公司治理与关联方",
+    "damagesAndSetoff": "价款、损失与抵销",
+    "assetsAndInsolvency": "资产、执行与破产风险",
+    "negotiationAndExit": "谈判、和解与退出方案",
+}
+
+COMMERCIAL_REQUIRED_KEYS = {
+    "transactionStructure": {"id", "subject", "commercialRole", "contractRole", "evidence", "issue"},
+    "contractDocuments": {"id", "date", "document", "parties", "appliesTo", "relation"},
+    "authorityAndSeals": {"id", "actor", "authoritySource", "evidence", "risk"},
+    "performanceLedger": {"id", "obligation", "performance", "evidence", "dispute"},
+    "paymentAndInvoices": {"id", "date", "amount", "purpose", "evidence"},
+    "noticesAndChanges": {"id", "date", "type", "content", "receipt"},
+    "securityAndPriority": {"id", "type", "obligor", "scope", "perfection", "priority"},
+    "corporateAndRelatedParties": {"id", "entity", "relation", "evidence", "issue"},
+    "damagesAndSetoff": {"id", "category", "amount", "basis", "dispute"},
+    "assetsAndInsolvency": {"id", "asset", "ownership", "encumbrance", "valueBasis"},
+    "negotiationAndExit": {"id", "option", "condition", "protection", "risk"},
+}
+
 
 def read_matter(path: Path) -> dict:
     try:
@@ -113,6 +148,41 @@ def audit(data: dict) -> tuple[list[str], list[str]]:
                 )
                 if empty_keys:
                     errors.append(f"{field}第{index}项字段为空：{'、'.join(empty_keys)}")
+
+    if "commercialProfileVersion" in data or "commercial" in data:
+        if data.get("commercialProfileVersion") != 1:
+            errors.append("commercialProfileVersion必须为1")
+        commercial = data.get("commercial")
+        if not isinstance(commercial, dict):
+            errors.append("commercial必须是对象")
+        else:
+            missing_commercial = sorted(COMMERCIAL_FIELDS - set(commercial))
+            if missing_commercial:
+                errors.append("commercial缺少字段：" + "、".join(missing_commercial))
+            for field in sorted(COMMERCIAL_FIELDS & set(commercial)):
+                if not isinstance(commercial[field], list):
+                    errors.append(f"commercial.{field}必须是数组")
+                elif not commercial[field]:
+                    gaps.append(f"商事模块尚未评估：{COMMERCIAL_LABELS[field]}（{field}）")
+                else:
+                    for index, item in enumerate(commercial[field], start=1):
+                        if not isinstance(item, dict):
+                            errors.append(f"commercial.{field}第{index}项必须是对象")
+                            continue
+                        required = COMMERCIAL_REQUIRED_KEYS[field]
+                        missing_keys = sorted(required - set(item))
+                        if missing_keys:
+                            errors.append(
+                                f"commercial.{field}第{index}项缺少字段：{'、'.join(missing_keys)}"
+                            )
+                        empty_keys = sorted(
+                            key for key in required & set(item)
+                            if item[key] is None or item[key] == "" or item[key] == []
+                        )
+                        if empty_keys:
+                            errors.append(
+                                f"commercial.{field}第{index}项字段为空：{'、'.join(empty_keys)}"
+                            )
     return errors, gaps
 
 

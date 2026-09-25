@@ -121,6 +121,21 @@ def main() -> None:
         assert len(path.read_text(encoding="utf-8")) >= 200, f"practice workflow is unexpectedly short: {path.name}"
     assert (ROOT / "scripts" / "audit_matter.py").is_file(), "missing matter audit tool"
 
+    commercial_files = {
+        "README.md", "contract-performance.md", "corporate-equity.md", "authority-seals.md",
+        "security-finance.md", "damages-accounting.md", "preservation-insolvency.md",
+        "arbitration-crossborder.md",
+    }
+    commercial_dir = ROOT / "references" / "commercial"
+    assert {path.name for path in commercial_dir.glob("*.md")} == commercial_files, "commercial workflow set mismatch"
+    patterns = json.loads((commercial_dir / "decision-patterns.json").read_text(encoding="utf-8"))
+    assert len(patterns) == 12 and len({item["id"] for item in patterns}) == 12
+    for item in patterns:
+        assert all(item.get(key) for key in (
+            "id", "name", "decisiveQuestions", "evidence", "opposingArguments", "failureMode",
+        ))
+        assert re.fullmatch(r"C\d{2}", item["id"]), f"invalid commercial pattern id: {item['id']}"
+
     criminal = (ROOT / "references" / "法律法规" / "中华人民共和国刑法.md").read_text(encoding="utf-8")
     assert "有下列情形之一的，从重处罚" in criminal
     assert "（七）将违法所得用于行贿的。" in criminal
@@ -145,7 +160,7 @@ def main() -> None:
 
     law_count = sum(item.get("documentType", "法律") == "法律" for item in catalog)
     interpretation_count = len(catalog) - law_count
-    print(f"知识库结构校验通过：{law_count}部法律、{interpretation_count}部司法解释，{len(index):,}条完整可提取记录，{len(cases)}个案例卡、{len(archetypes)}类案件原型、{len(failure_numbers)}类失败模式、{len(practice_files)}份办案实务工作流；不代表法律适用正确性认证。")
+    print(f"知识库结构校验通过：{law_count}部法律、{interpretation_count}部司法解释，{len(index):,}条完整可提取记录，{len(cases)}个案例卡、{len(archetypes)}类案件原型、{len(failure_numbers)}类失败模式、{len(practice_files)}份通用办案工作流、{len(commercial_files)}份商事工作流、{len(patterns)}类商事决策模式；不代表法律适用正确性认证。")
 
 
 if __name__ == "__main__":

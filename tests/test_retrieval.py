@@ -167,6 +167,33 @@ class RetrievalTests(unittest.TestCase):
             self.assertIn("待补工作", result.stdout)
             self.assertIn("尚未评估保全、财产线索和实际执行路径", result.stdout)
 
+    def test_commercial_matter_profile_and_audit(self):
+        with tempfile.TemporaryDirectory() as temp:
+            markdown, data = create_workspace(Path(temp) / "matter", "商事案件", profile="commercial")
+            document = json.loads(data.read_text(encoding="utf-8"))
+            self.assertEqual(document["commercialProfileVersion"], 1)
+            self.assertIn("performanceLedger", document["commercial"])
+            self.assertIn("商事专项台账", markdown.read_text(encoding="utf-8"))
+            errors, gaps = audit_matter(document)
+            self.assertEqual(errors, [])
+            self.assertIn("商事模块尚未评估：交易结构（transactionStructure）", gaps)
+
+    def test_unknown_matter_profile_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            with self.assertRaises(SystemExit):
+                create_workspace(Path(temp) / "matter", "未知类型", profile="unknown")
+
+    def test_commercial_audit_rejects_placeholder_records(self):
+        with tempfile.TemporaryDirectory() as temp:
+            _, data = create_workspace(Path(temp) / "matter", "商事占位审计", profile="commercial")
+            document = json.loads(data.read_text(encoding="utf-8"))
+            document["commercial"]["performanceLedger"] = [{"id": "B01"}]
+            errors, _ = audit_matter(document)
+            message = "\n".join(errors)
+            self.assertIn("commercial.performanceLedger第1项缺少字段", message)
+            self.assertIn("evidence", message)
+            self.assertIn("performance", message)
+
     def test_matter_workspace_refuses_git_repo_by_default(self):
         with tempfile.TemporaryDirectory() as temp:
             repo = Path(temp) / "public-repo"

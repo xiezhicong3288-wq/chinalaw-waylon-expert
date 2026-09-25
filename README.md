@@ -37,6 +37,12 @@
 
 `scripts/new_matter.py` 现在生成第二版结构化案件工作台；`scripts/audit_matter.py` 可以发现尚未填写的事实、证据、期限、争点、风险和行动项。审计只检查准备完整性，不计算胜诉率。
 
+## 商事案件专项升级
+
+商事模块新增8份专项工作流和12类决策模式，覆盖合同链与履行、公司股权、授权印章、担保融资、价款与损失、保全执行、困境企业、商事仲裁和涉外交易。它要求分别建立交易结构、合同文件、履行、资金、授权、担保顺位和资产回收台账。
+
+商事工作台使用 `--profile commercial` 创建，并由同一个审计工具检查11个商事模块是否已经评估。
+
 ## 一句话安装
 
 在 Codex 中输入：
@@ -61,6 +67,7 @@
 
 ```text
 python scripts/new_matter.py --output C:\path\to\private-matter --title 示例案件
+python scripts/new_matter.py --profile commercial --output C:\path\to\commercial-matter --title 商事案件
 python scripts/audit_matter.py --input C:\path\to\private-matter\matter.json
 ```
 
@@ -76,7 +83,7 @@ python -m unittest discover -s tests -v
 
 `audit_sources.py --online` 会检查来源网址可达性。自动测试验证数据结构和检索行为，不等于律师审阅或个案法律意见。
 
-当前数据、工具和独立前向测试见 [第四阶段验证记录](evals/reports/2026-09-25-phase4.md)；[第三阶段记录](evals/reports/2026-09-25-phase3.md)保留为案例经验升级基线。
+当前数据、工具和独立前向测试见 [第五阶段商事能力验证记录](evals/reports/2026-09-25-phase5.md)；[第四阶段记录](evals/reports/2026-09-25-phase4.md)保留为通用办案能力基线。
 
 ## 文件结构
 
@@ -90,6 +97,7 @@ python -m unittest discover -s tests -v
 - `references/cases/`：12个最高人民法院指导案例学习卡，非完整案卷。
 - `references/experience/`：案件原型、常见失败模式和经验迁移方法。
 - `references/practice/`：案件体检、证据工程、庭审、和解执行、上诉复盘和高风险案件工作流。
+- `references/commercial/`：商事专项工作流和12类常见决策模式。
 - `scripts/`：法律与案例检索、校验、来源审计、案件工作台和准备缺口审计工具。
 - `tests/` 与 `evals/`：回归测试和行为评估材料。
 

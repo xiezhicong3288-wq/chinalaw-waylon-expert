@@ -16,6 +16,7 @@ description: 中国法律条文检索、案件争点、程序期限、证据与�
 - 查具体条文：检索目录与统一索引，读取原文文件。
 - 真实纠纷、重大案件或诉讼策略：读取 [案件与证据分析](references/workflows/case-analysis.md)。
 - 用户要求“按律师办案”“全案策略”“庭审准备”“和解执行”或“复盘上诉”：先读取 [办案实务入口](references/practice/README.md)，再按阶段加载对应实务文件。
+- 买卖、回款、股权、公司治理、担保、融资、供应链、商事仲裁或企业困境：同时读取 [商事案件入口](references/commercial/README.md) 和 [商事决策模式](references/commercial/decision-patterns.json)，建立交易、履行、资金、授权、担保与资产六张图表。
 - 期限、送达、上诉、复议、仲裁或执行：同时读取 [程序期限核验](references/workflows/deadline-check.md) 及对应程序法。
 - 事实跨年份、新旧法衔接或有效性存疑：读取 [版本核验](references/workflows/version-check.md)。
 - 类案研究或用户询问“经验”：读取 [案例检索](references/workflows/case-research.md)、[案例目录](references/cases/catalog.json) 和 [案例经验库](references/experience/README.md)，按争点选择案例卡并做反事实比较。
@@ -25,6 +26,7 @@ description: 中国法律条文检索、案件争点、程序期限、证据与�
 
 ```text
 python scripts/new_matter.py --output <案件目录> --title <案件名称>
+python scripts/new_matter.py --profile commercial --output <案件目录> --title <商事案件名称>
 ```
 
 脚本默认拒绝写入任何 Git 仓库，降低案件材料被提交或公开的风险。只有用户明确选择受控仓库时才使用 `--allow-git-repo`。
@@ -101,6 +103,7 @@ python scripts/search_law.py --keyword 举证责任 --limit 10
 - `references/cases/`：官方来源核验的案例学习卡，不是完整案卷。
 - `references/experience/`：案件原型、常见失败模式和案例经验迁移方法。
 - `references/practice/`：案件体检、证据工程、庭审、和解执行、上诉复盘和高风险案件控制。
+- `references/commercial/`：合同履行、公司股权、授权印章、担保融资、损失核算、保全破产和商事仲裁专项流程。
 - `references/常用法律文书/`：备忘录、证据目录和案件时间线模板。
 - `scripts/search_law.py`：确定性检索。
 - `scripts/search_cases.py`：按编号、法域、标签和关键词检索案例卡。
