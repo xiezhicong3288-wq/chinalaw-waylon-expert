@@ -4,6 +4,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,6 +14,7 @@ from audit_sources import audit as audit_sources
 from new_matter import create_workspace
 from search_cases import card_text, load_catalog as load_case_catalog
 from audit_matter import audit as audit_matter
+from package_skill import build_package
 
 
 class RetrievalTests(unittest.TestCase):
@@ -193,6 +195,16 @@ class RetrievalTests(unittest.TestCase):
             self.assertIn("commercial.performanceLedger第1项缺少字段", message)
             self.assertIn("evidence", message)
             self.assertIn("performance", message)
+
+    def test_package_preserves_unicode_paths_with_redundant_metadata(self):
+        with tempfile.TemporaryDirectory() as temp:
+            package = Path(temp) / "skill.zip"
+            build_package(ROOT, package)
+            with zipfile.ZipFile(package) as archive:
+                info = archive.getinfo(f"{ROOT.name}/references/法律法规/中华人民共和国刑法.md")
+                self.assertEqual(info.create_system, 3)
+                self.assertTrue(info.flag_bits & 0x800)
+                self.assertIn(b"up", info.extra)
 
     def test_matter_workspace_refuses_git_repo_by_default(self):
         with tempfile.TemporaryDirectory() as temp:

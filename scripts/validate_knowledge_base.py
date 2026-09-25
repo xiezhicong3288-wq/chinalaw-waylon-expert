@@ -120,6 +120,7 @@ def main() -> None:
     for path in practice_dir.glob("*.md"):
         assert len(path.read_text(encoding="utf-8")) >= 200, f"practice workflow is unexpectedly short: {path.name}"
     assert (ROOT / "scripts" / "audit_matter.py").is_file(), "missing matter audit tool"
+    assert (ROOT / "scripts" / "package_skill.py").is_file(), "missing Unicode-safe package tool"
 
     commercial_files = {
         "README.md", "contract-performance.md", "corporate-equity.md", "authority-seals.md",

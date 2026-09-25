@@ -53,6 +53,16 @@
 
 也可以下载 ZIP 或克隆仓库后安装完整目录。必须保留 `SKILL.md`、`references/`、`scripts/` 的相对位置。
 
+### ZIP 中文路径兼容
+
+发布ZIP必须使用仓库内的打包器：
+
+```text
+python scripts/package_skill.py
+```
+
+打包器会同时写入UTF-8文件名标志、Unix主机标识和Info-ZIP Unicode Path冗余字段，并在生成后逐项比较源码与归档路径，避免部分解压器把中文文件名误按DOS代码页处理。
+
 ## 使用示例
 
 ```text
@@ -79,6 +89,7 @@ python scripts/audit_matter.py --input C:\path\to\private-matter\matter.json
 python scripts/validate_knowledge_base.py
 python scripts/audit_sources.py
 python -m unittest discover -s tests -v
+python scripts/package_skill.py
 ```
 
 `audit_sources.py --online` 会检查来源网址可达性。自动测试验证数据结构和检索行为，不等于律师审阅或个案法律意见。
@@ -99,6 +110,7 @@ python -m unittest discover -s tests -v
 - `references/practice/`：案件体检、证据工程、庭审、和解执行、上诉复盘和高风险案件工作流。
 - `references/commercial/`：商事专项工作流和12类常见决策模式。
 - `scripts/`：法律与案例检索、校验、来源审计、案件工作台和准备缺口审计工具。
+- `scripts/package_skill.py`：生成并验证兼容中文路径的安装ZIP。
 - `tests/` 与 `evals/`：回归测试和行为评估材料。
 
 ## 数据与边界
