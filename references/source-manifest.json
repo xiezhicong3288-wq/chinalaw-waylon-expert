@@ -79,5 +79,61 @@
     "organization": "北京市人民政府（转载全国人大常委会现行文本）",
     "sha256": "2b3c56cd023225108ec948f3b308e073819a11fa69e67b25d85b488fe7884f91",
     "downloadedAt": "2026-09-24"
+  },
+  {
+    "law": "中华人民共和国民事诉讼法",
+    "file": "civil-procedure.html",
+    "url": "https://cicc.court.gov.cn/html/1/218/62/83/443.html",
+    "organization": "最高人民法院国际商事法庭（载明来源为国家法律法规数据库）",
+    "sha256": "f23cdce7ec5ab19ade9c4d437eba75113d454840fab18122fc5046457f85a815",
+    "downloadedAt": "2026-09-25"
+  },
+  {
+    "law": "中华人民共和国刑事诉讼法",
+    "file": "criminal-procedure.html",
+    "url": "https://www.spp.gov.cn/spp/zdgz/201810/t20181027_396818.shtml",
+    "organization": "最高人民检察院（公布现行全文）",
+    "sha256": "42dc168c86fba124461fe30f164d5ade2d2ef4f66e73738c1f017ca6d7d8866b",
+    "downloadedAt": "2026-09-25"
+  },
+  {
+    "law": "中华人民共和国行政复议法",
+    "file": "administrative-reconsideration.html",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_70518816df484be18f6b38fa295750bb.html",
+    "organization": "国家市场监督管理总局（公布2023年修订全文）",
+    "sha256": "756a8021c7efaa0810acce860fb8e0221c1f02e1b8f6ad13dba0c689a5b44638",
+    "downloadedAt": "2026-09-25"
+  },
+  {
+    "law": "中华人民共和国公司法",
+    "file": "company-law.html",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5233383/content.html",
+    "organization": "国家税务总局法规库（公布2023年修订全文）",
+    "sha256": "13621de9efe0cf144e4bfb4c831c5f27c7bfd62a872ca64f87cc143a008d8eee",
+    "downloadedAt": "2026-09-25"
+  },
+  {
+    "law": "中华人民共和国劳动合同法",
+    "file": "labor-contract-law.html",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+    "organization": "国家市场监督管理总局（转载现行全文）",
+    "sha256": "ed7526b1bc0c15adbed8093c77d7129801752d76ef92d0eede8469ebe9199eb1",
+    "downloadedAt": "2026-09-25"
+  },
+  {
+    "law": "中华人民共和国仲裁法",
+    "file": "arbitration-law.html",
+    "url": "https://legalinfo.moj.gov.cn/pub/sfbzhfx/zt/2025nzt0120/xcgvxxddzcf/202509/t20250915_525094.html",
+    "organization": "司法部智慧普法平台（公布2025年修订全文）",
+    "sha256": "4f45ab6e138b283bc36da373329e92e6448c5eaa4dd131872dd140f51141be3f",
+    "downloadedAt": "2026-09-25"
+  },
+  {
+    "law": "最高人民法院关于民事诉讼证据的若干规定",
+    "file": "civil-evidence.html",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/212721.html",
+    "organization": "最高人民法院（公布2019年修正全文）",
+    "sha256": "15bb756cd88f51ccb63cb0ea3dab3aad43671ad6c36a46e3d0eda60569708e78",
+    "downloadedAt": "2026-09-25"
   }
 ]

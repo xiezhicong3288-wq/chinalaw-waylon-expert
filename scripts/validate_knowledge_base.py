@@ -10,6 +10,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from search_law import file_articles
+from audit_sources import audit as audit_sources
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -36,8 +37,20 @@ def main() -> None:
 
     catalog = load("law-catalog.json")
     index = load("law-index.json")
-    assert len(catalog) == 10, f"expected 10 laws, got {len(catalog)}"
-    assert len(index) == 2476, f"expected 2476 records, got {len(index)}"
+    required = {
+        "中华人民共和国民法典", "中华人民共和国宪法", "中华人民共和国刑法",
+        "中华人民共和国刑事诉讼法", "中华人民共和国民事诉讼法",
+        "中华人民共和国行政诉讼法", "中华人民共和国行政复议法",
+        "中华人民共和国行政处罚法", "中华人民共和国公司法",
+        "中华人民共和国仲裁法", "中华人民共和国劳动法",
+        "中华人民共和国劳动合同法", "中华人民共和国社会保险法",
+        "中华人民共和国反垄断法", "中华人民共和国反不正当竞争法",
+        "中华人民共和国消费者权益保护法",
+        "最高人民法院关于民事诉讼证据的若干规定",
+    }
+    assert {item["name"] for item in catalog} == required, "authority catalog is incomplete or unexpected"
+    expected_records = sum(item["articleCount"] for item in catalog)
+    assert len(index) == expected_records, f"expected {expected_records} records, got {len(index)}"
 
     counts = Counter(item["lawSlug"] for item in index)
     keys = [(item["lawSlug"], item["article"], item.get("articleSuffix")) for item in index]
@@ -86,7 +99,19 @@ def main() -> None:
     constitution = (ROOT / "references" / "法律法规" / "中华人民共和国宪法.md").read_text(encoding="utf-8")
     assert "## 序言" in constitution and "**第一百四十三条**" in constitution
 
-    print(f"知识库结构校验通过：10部法律，2,476条完整可提取记录，{len(cases)}个案例卡；不代表法律适用正确性认证。")
+    assert not audit_sources(), "source manifest audit failed"
+    criminal_procedure = (ROOT / "references" / "法律法规" / "中华人民共和国刑事诉讼法.md").read_text(encoding="utf-8")
+    company = (ROOT / "references" / "法律法规" / "中华人民共和国公司法.md").read_text(encoding="utf-8")
+    arbitration = (ROOT / "references" / "法律法规" / "中华人民共和国仲裁法.md").read_text(encoding="utf-8")
+    anti_monopoly = (ROOT / "references" / "法律法规" / "中华人民共和国反垄断法.md").read_text(encoding="utf-8")
+    assert "Copyrights©" not in criminal_procedure and "相关新闻" not in criminal_procedure
+    assert "用户登录" not in company and "网站纠错" not in company
+    assert "网站标识码" not in arbitration
+    assert "扫一扫在手机打开当前页" not in anti_monopoly and "网站标识码" not in anti_monopoly
+
+    law_count = sum(item.get("documentType", "法律") == "法律" for item in catalog)
+    interpretation_count = len(catalog) - law_count
+    print(f"知识库结构校验通过：{law_count}部法律、{interpretation_count}部司法解释，{len(index):,}条完整可提取记录，{len(cases)}个案例卡；不代表法律适用正确性认证。")
 
 
 if __name__ == "__main__":

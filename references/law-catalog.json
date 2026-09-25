@@ -1,59 +1,5 @@
 [
   {
-    "name": "中华人民共和国民法典",
-    "slug": "civil-code",
-    "aliases": [
-      "民法典",
-      "民法"
-    ],
-    "articleCount": 1260,
-    "version": "2020年5月28日通过，2021年1月1日起施行",
-    "files": [
-      "references/民法典/01-总则编.md",
-      "references/民法典/02-物权编.md",
-      "references/民法典/03-合同编.md",
-      "references/民法典/04-人格权编.md",
-      "references/民法典/05-婚姻家庭编.md",
-      "references/民法典/06-继承编.md",
-      "references/民法典/07-侵权责任编.md"
-    ]
-  },
-  {
-    "name": "中华人民共和国宪法",
-    "slug": "constitution",
-    "aliases": [
-      "宪法",
-      "国家根本法",
-      "公民基本权利",
-      "国家机构"
-    ],
-    "articleCount": 143,
-    "baseArticleMax": 143,
-    "version": "1982年通过，历经1988、1993、1999、2004、2018年修正",
-    "effective": "现行文本（2018年修正）",
-    "files": [
-      "references/法律法规/中华人民共和国宪法.md"
-    ]
-  },
-  {
-    "name": "中华人民共和国刑法",
-    "slug": "criminal-law",
-    "aliases": [
-      "刑法",
-      "犯罪",
-      "刑事责任",
-      "量刑",
-      "刑罚"
-    ],
-    "articleCount": 505,
-    "baseArticleMax": 452,
-    "version": "1997年修订文本，整合至刑法修正案（十一），并按刑法修正案（十二）更新7条",
-    "effective": "刑法修正案（十二）自2024年3月1日起施行",
-    "files": [
-      "references/法律法规/中华人民共和国刑法.md"
-    ]
-  },
-  {
     "name": "中华人民共和国行政诉讼法",
     "slug": "administrative-litigation-law",
     "aliases": [
@@ -69,7 +15,8 @@
     "effective": "现行文本（2017年修正）",
     "files": [
       "references/法律法规/中华人民共和国行政诉讼法.md"
-    ]
+    ],
+    "documentType": "法律"
   },
   {
     "name": "中华人民共和国行政处罚法",
@@ -87,6 +34,25 @@
     "effective": "2021年7月15日起施行",
     "files": [
       "references/法律法规/中华人民共和国行政处罚法.md"
+    ],
+    "documentType": "法律"
+  },
+  {
+    "name": "中华人民共和国行政复议法",
+    "slug": "administrative-reconsideration-law",
+    "documentType": "法律",
+    "aliases": [
+      "行政复议法",
+      "行政复议",
+      "复议机关",
+      "行政救济"
+    ],
+    "articleCount": 90,
+    "baseArticleMax": 90,
+    "version": "1999年通过，2009年、2017年修正，2023年修订",
+    "effective": "2024年1月1日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国行政复议法.md"
     ]
   },
   {
@@ -105,7 +71,8 @@
     "effective": "2022年8月1日起施行",
     "files": [
       "references/法律法规/中华人民共和国反垄断法.md"
-    ]
+    ],
+    "documentType": "法律"
   },
   {
     "name": "中华人民共和国反不正当竞争法",
@@ -124,7 +91,123 @@
     "effective": "2025年10月15日起施行",
     "files": [
       "references/法律法规/中华人民共和国反不正当竞争法.md"
+    ],
+    "documentType": "法律"
+  },
+  {
+    "name": "中华人民共和国仲裁法",
+    "slug": "arbitration-law",
+    "documentType": "法律",
+    "aliases": [
+      "仲裁法",
+      "仲裁",
+      "仲裁协议",
+      "仲裁裁决",
+      "撤销裁决"
+    ],
+    "articleCount": 96,
+    "baseArticleMax": 96,
+    "version": "1994年通过，2009年、2017年修正，2025年修订",
+    "effective": "2026年3月1日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国仲裁法.md"
     ]
+  },
+  {
+    "name": "中华人民共和国民法典",
+    "slug": "civil-code",
+    "aliases": [
+      "民法典",
+      "民法"
+    ],
+    "articleCount": 1260,
+    "version": "2020年5月28日通过，2021年1月1日起施行",
+    "files": [
+      "references/民法典/01-总则编.md",
+      "references/民法典/02-物权编.md",
+      "references/民法典/03-合同编.md",
+      "references/民法典/04-人格权编.md",
+      "references/民法典/05-婚姻家庭编.md",
+      "references/民法典/06-继承编.md",
+      "references/民法典/07-侵权责任编.md"
+    ],
+    "documentType": "法律"
+  },
+  {
+    "name": "最高人民法院关于民事诉讼证据的若干规定",
+    "slug": "civil-evidence-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "民事诉讼证据规定",
+      "民事证据规定",
+      "证据规定",
+      "举证责任",
+      "证据审查"
+    ],
+    "articleCount": 100,
+    "baseArticleMax": 100,
+    "version": "2001年公布，2019年修正",
+    "effective": "2020年5月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于民事诉讼证据的若干规定.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国民事诉讼法",
+    "slug": "civil-procedure-law",
+    "documentType": "法律",
+    "aliases": [
+      "民事诉讼法",
+      "民诉法",
+      "民事诉讼",
+      "民事审判",
+      "执行"
+    ],
+    "articleCount": 305,
+    "baseArticleMax": 305,
+    "version": "1991年通过，2007年、2012年、2017年、2021年、2023年修正",
+    "effective": "2024年1月1日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国民事诉讼法.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国公司法",
+    "slug": "company-law",
+    "documentType": "法律",
+    "aliases": [
+      "公司法",
+      "有限责任公司",
+      "股份有限公司",
+      "股东",
+      "董事",
+      "公司治理"
+    ],
+    "articleCount": 266,
+    "baseArticleMax": 266,
+    "version": "1993年通过，2023年第二次修订",
+    "effective": "2024年7月1日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国公司法.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国宪法",
+    "slug": "constitution",
+    "aliases": [
+      "宪法",
+      "国家根本法",
+      "公民基本权利",
+      "国家机构"
+    ],
+    "articleCount": 143,
+    "baseArticleMax": 143,
+    "version": "1982年通过，历经1988、1993、1999、2004、2018年修正",
+    "effective": "现行文本（2018年修正）",
+    "files": [
+      "references/法律法规/中华人民共和国宪法.md"
+    ],
+    "documentType": "法律"
   },
   {
     "name": "中华人民共和国消费者权益保护法",
@@ -143,6 +226,65 @@
     "effective": "现行文本（2013年第二次修正）",
     "files": [
       "references/法律法规/中华人民共和国消费者权益保护法.md"
+    ],
+    "documentType": "法律"
+  },
+  {
+    "name": "中华人民共和国刑法",
+    "slug": "criminal-law",
+    "aliases": [
+      "刑法",
+      "犯罪",
+      "刑事责任",
+      "量刑",
+      "刑罚"
+    ],
+    "articleCount": 505,
+    "baseArticleMax": 452,
+    "version": "1997年修订文本，整合至刑法修正案（十一），并按刑法修正案（十二）更新7条",
+    "effective": "刑法修正案（十二）自2024年3月1日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国刑法.md"
+    ],
+    "documentType": "法律"
+  },
+  {
+    "name": "中华人民共和国刑事诉讼法",
+    "slug": "criminal-procedure-law",
+    "documentType": "法律",
+    "aliases": [
+      "刑事诉讼法",
+      "刑诉法",
+      "刑事诉讼",
+      "侦查",
+      "审查起诉",
+      "辩护"
+    ],
+    "articleCount": 308,
+    "baseArticleMax": 308,
+    "version": "1979年通过，1996年、2012年、2018年修正",
+    "effective": "现行文本（2018年第三次修正）",
+    "files": [
+      "references/法律法规/中华人民共和国刑事诉讼法.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国劳动合同法",
+    "slug": "labor-contract-law",
+    "documentType": "法律",
+    "aliases": [
+      "劳动合同法",
+      "劳动合同",
+      "解除劳动合同",
+      "经济补偿",
+      "劳务派遣"
+    ],
+    "articleCount": 98,
+    "baseArticleMax": 98,
+    "version": "2007年通过，2012年修正",
+    "effective": "现行文本（2012年修正，2013年7月1日起施行）",
+    "files": [
+      "references/法律法规/中华人民共和国劳动合同法.md"
     ]
   },
   {
@@ -162,7 +304,8 @@
     "effective": "现行文本（2018年第二次修正）",
     "files": [
       "references/法律法规/中华人民共和国劳动法.md"
-    ]
+    ],
+    "documentType": "法律"
   },
   {
     "name": "中华人民共和国社会保险法",
@@ -182,6 +325,7 @@
     "effective": "现行文本（2018年修正）",
     "files": [
       "references/法律法规/中华人民共和国社会保险法.md"
-    ]
+    ],
+    "documentType": "法律"
   }
 ]

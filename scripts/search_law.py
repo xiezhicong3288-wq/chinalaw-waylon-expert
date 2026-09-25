@@ -12,6 +12,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ARTICLE_HEADING = re.compile(r"^\*\*(第[^*]+条(?:之[^*]+)?)\*\*(?:\s*(.*))?$")
+KEYWORD_ALIASES = {
+    "电子送达": ("电子送达", "电子方式送达"),
+    "网络送达": ("网络送达", "电子方式送达"),
+    "聊天记录": ("聊天记录", "即时通信", "通讯群组"),
+}
 
 
 def load_json(name: str):
@@ -111,7 +116,11 @@ def main() -> None:
             print()
         return
 
-    needle = args.keyword.casefold()
+    original_needle = args.keyword.strip().casefold()
+    needles = tuple(value.casefold() for value in KEYWORD_ALIASES.get(original_needle, (original_needle,)))
+    if len(needles) > 1:
+        print(f"检索扩展：{args.keyword.strip()} → {'、'.join(KEYWORD_ALIASES[original_needle])}")
+        print()
     found = 0
     for item in candidates:
         body = article_text(item["file"], item["articleCn"])
@@ -121,10 +130,11 @@ def main() -> None:
                 item.get("section"), item.get("topic"), body,
             )
         ).casefold()
-        if needle not in haystack:
+        matched = next((needle for needle in needles if needle in haystack), None)
+        if matched is None:
             continue
         compact = re.sub(r"\s+", " ", body)
-        position = compact.casefold().find(needle)
+        position = compact.casefold().find(matched)
         start = max(0, position - 45)
         snippet = compact[start:start + 150]
         print(f"《{item['law']}》{item['articleCn']} | {item['file']}")

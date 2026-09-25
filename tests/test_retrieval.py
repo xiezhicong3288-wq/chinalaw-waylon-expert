@@ -2,12 +2,15 @@
 import json
 import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from search_law import article_text, choose_laws, file_articles, load_json
+from audit_sources import audit as audit_sources
+from new_matter import create_workspace
 
 
 class RetrievalTests(unittest.TestCase):
@@ -59,7 +62,7 @@ class RetrievalTests(unittest.TestCase):
 
     def test_unknown_law_does_not_silently_match(self):
         with self.assertRaises(SystemExit):
-            choose_laws("中华人民共和国劳动合同法", self.catalog)
+            choose_laws("中华人民共和国税收征收管理法", self.catalog)
 
     def test_exact_alias(self):
         self.assertEqual(choose_laws("消保法", self.catalog), {"consumer-rights-law"})
@@ -85,6 +88,52 @@ class RetrievalTests(unittest.TestCase):
     def test_file_path_cannot_escape_root(self):
         with self.assertRaises(ValueError):
             file_articles("../not-in-skill.md")
+
+    def test_phase_two_last_articles(self):
+        expectations = {
+            ("civil-procedure-law", 305): "外国国家豁免",
+            ("criminal-procedure-law", 308): "中国海警局",
+            ("administrative-reconsideration-law", 90): "2024年1月1日起施行",
+            ("company-law", 266): "2024年7月1日起施行",
+            ("labor-contract-law", 98): "2008年1月1日起施行",
+            ("arbitration-law", 96): "2026年3月1日起施行",
+            ("civil-evidence-provisions", 100): "2020年5月1日起施行",
+        }
+        for (slug, number), phrase in expectations.items():
+            with self.subTest(slug=slug):
+                self.assertIn(phrase, self.get_article(slug, number))
+
+    def test_new_authority_aliases(self):
+        self.assertEqual(choose_laws("民诉法", self.catalog), {"civil-procedure-law"})
+        self.assertEqual(choose_laws("民事证据规定", self.catalog), {"civil-evidence-provisions"})
+        self.assertEqual(choose_laws("仲裁法", self.catalog), {"arbitration-law"})
+
+    def test_source_manifest_offline_audit(self):
+        self.assertEqual(audit_sources(), [])
+
+    def test_matter_workspace_is_structured_and_refuses_overwrite(self):
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp) / "matter"
+            markdown, data = create_workspace(output, "测试案件")
+            self.assertIn("要件—事实—证据矩阵", markdown.read_text(encoding="utf-8"))
+            self.assertEqual(json.loads(data.read_text(encoding="utf-8"))["title"], "测试案件")
+            with self.assertRaises(SystemExit):
+                create_workspace(output, "覆盖")
+
+    def test_matter_workspace_refuses_git_repo_by_default(self):
+        with tempfile.TemporaryDirectory() as temp:
+            repo = Path(temp) / "public-repo"
+            (repo / ".git").mkdir(parents=True)
+            with self.assertRaises(SystemExit):
+                create_workspace(repo / "matter", "敏感案件")
+            markdown, _ = create_workspace(repo / "matter", "明确允许", allow_git_repo=True)
+            self.assertTrue(markdown.is_file())
+
+    def test_keyword_alias_finds_electronic_service(self):
+        result = self.cli("--law", "民事诉讼法", "--keyword", "电子送达", "--limit", "3")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("检索扩展", result.stdout)
+        self.assertIn("第九十条", result.stdout)
 
 
 if __name__ == "__main__":
