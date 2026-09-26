@@ -23,20 +23,25 @@ def load_json(name: str):
     return json.loads((ROOT / "references" / name).read_text(encoding="utf-8"))
 
 
+def normalized_law_name(value: str) -> str:
+    """Treat single/double Chinese book-title marks as equivalent in law names."""
+    return value.casefold().translate(str.maketrans({"《": "〈", "》": "〉"}))
+
+
 def choose_laws(query: str | None, catalog: list[dict]) -> set[str]:
     if not query:
         return {item["slug"] for item in catalog}
-    normalized = query.casefold()
+    normalized = normalized_law_name(query)
     exact = {
         item["slug"] for item in catalog
-        if normalized in [value.casefold() for value in [item["name"], item["slug"], *item.get("aliases", [])]]
+        if normalized in [normalized_law_name(value) for value in [item["name"], item["slug"], *item.get("aliases", [])]]
     }
     if exact:
         return exact
     matches = set()
     for item in catalog:
         names = [item["name"], item["slug"], *item.get("aliases", [])]
-        if any(normalized in value.casefold() for value in names):
+        if any(normalized in normalized_law_name(value) for value in names):
             matches.add(item["slug"])
     if not matches:
         raise SystemExit(f"未识别法律：{query}")

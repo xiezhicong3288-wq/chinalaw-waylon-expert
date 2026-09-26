@@ -11,6 +11,8 @@ import json
 import re
 from pathlib import Path
 
+from audit_reasoning import audit_reasoning
+
 
 REQUIRED_FIELDS = {
     "schemaVersion", "title", "createdAt", "confidentiality", "asOf", "goals",
@@ -183,6 +185,9 @@ def audit(data: dict) -> tuple[list[str], list[str]]:
                             errors.append(
                                 f"commercial.{field}第{index}项字段为空：{'、'.join(empty_keys)}"
                             )
+    reasoning_errors, reasoning_gaps = audit_reasoning(data)
+    errors.extend(reasoning_errors)
+    gaps.extend(reasoning_gaps)
     return errors, gaps
 
 

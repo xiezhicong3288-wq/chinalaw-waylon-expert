@@ -327,5 +327,974 @@
       "references/法律法规/中华人民共和国社会保险法.md"
     ],
     "documentType": "法律"
+  },
+  {
+    "name": "最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（二）",
+    "slug": "construction-contract-interpretation-2",
+    "documentType": "司法解释",
+    "aliases": [
+      "建工解释二",
+      "建设工程解释二",
+      "建设工程施工合同司法解释二"
+    ],
+    "articleCount": 23,
+    "baseArticleMax": 23,
+    "version": "法释〔2026〕12号",
+    "effective": "2026年6月30日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（二）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国民法典〉合同编通则若干问题的解释",
+    "slug": "civil-code-contract-general-interpretation",
+    "documentType": "司法解释",
+    "aliases": [
+      "合同编通则解释",
+      "合同通则解释",
+      "合同编司法解释",
+      "法释2023第13号"
+    ],
+    "articleCount": 69,
+    "baseArticleMax": 69,
+    "version": "法释〔2023〕13号",
+    "effective": "2023年12月5日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用中华人民共和国民法典合同编通则若干问题的解释.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国民法典〉有关担保制度的解释",
+    "slug": "civil-code-guarantee-system-interpretation",
+    "documentType": "司法解释",
+    "aliases": [
+      "担保制度解释",
+      "民法典担保解释",
+      "担保司法解释",
+      "法释2020第28号"
+    ],
+    "articleCount": 71,
+    "baseArticleMax": 71,
+    "version": "法释〔2020〕28号",
+    "effective": "2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用中华人民共和国民法典有关担保制度的解释.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国公司法〉若干问题的规定（二）",
+    "slug": "company-law-interpretation-2",
+    "documentType": "司法解释",
+    "aliases": [
+      "公司法解释二",
+      "公司法司法解释二",
+      "公司法规定二"
+    ],
+    "articleCount": 24,
+    "baseArticleMax": 24,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国公司法〉若干问题的规定（二）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国公司法〉若干问题的规定（三）",
+    "slug": "company-law-interpretation-3",
+    "documentType": "司法解释",
+    "aliases": [
+      "公司法解释三",
+      "公司法司法解释三",
+      "公司法规定三"
+    ],
+    "articleCount": 28,
+    "baseArticleMax": 28,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国公司法〉若干问题的规定（三）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国公司法〉若干问题的规定（四）",
+    "slug": "company-law-interpretation-4",
+    "documentType": "司法解释",
+    "aliases": [
+      "公司法解释四",
+      "公司法司法解释四",
+      "公司法规定四"
+    ],
+    "articleCount": 27,
+    "baseArticleMax": 27,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国公司法〉若干问题的规定（四）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国公司法〉若干问题的规定（五）",
+    "slug": "company-law-interpretation-5",
+    "documentType": "司法解释",
+    "aliases": [
+      "公司法解释五",
+      "公司法司法解释五",
+      "公司法规定五"
+    ],
+    "articleCount": 6,
+    "baseArticleMax": 6,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国公司法〉若干问题的规定（五）.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国企业破产法",
+    "slug": "enterprise-bankruptcy-law",
+    "documentType": "法律",
+    "aliases": [
+      "企业破产法",
+      "破产法",
+      "企业破产",
+      "破产清算",
+      "破产重整"
+    ],
+    "articleCount": 136,
+    "baseArticleMax": 136,
+    "version": "2006年通过的现行文本",
+    "effective": "2007年6月1日起施行；修订草案尚未生效",
+    "files": [
+      "references/法律法规/中华人民共和国企业破产法.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国企业破产法〉若干问题的规定（二）",
+    "slug": "enterprise-bankruptcy-law-interpretation-2",
+    "documentType": "司法解释",
+    "aliases": [
+      "破产法解释二",
+      "企业破产法解释二",
+      "破产法司法解释二"
+    ],
+    "articleCount": 48,
+    "baseArticleMax": 48,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国企业破产法〉若干问题的规定（二）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国企业破产法〉若干问题的规定（三）",
+    "slug": "enterprise-bankruptcy-law-interpretation-3",
+    "documentType": "司法解释",
+    "aliases": [
+      "破产法解释三",
+      "企业破产法解释三",
+      "破产法司法解释三"
+    ],
+    "articleCount": 16,
+    "baseArticleMax": 16,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国企业破产法〉若干问题的规定（三）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国企业破产法〉若干问题的规定（一）",
+    "slug": "enterprise-bankruptcy-law-interpretation-1",
+    "documentType": "司法解释",
+    "aliases": [
+      "破产法解释一",
+      "企业破产法解释一",
+      "破产法司法解释一"
+    ],
+    "articleCount": 9,
+    "baseArticleMax": 9,
+    "version": "法释〔2011〕22号",
+    "effective": "2011年9月26日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国企业破产法〉若干问题的规定（一）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理买卖合同纠纷案件适用法律问题的解释",
+    "slug": "sale-contract-interpretation",
+    "documentType": "司法解释",
+    "aliases": [
+      "买卖合同解释",
+      "买卖合同司法解释",
+      "买卖合同纠纷解释"
+    ],
+    "articleCount": 33,
+    "baseArticleMax": 33,
+    "version": "2020年修正整合文本",
+    "effective": "2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理买卖合同纠纷案件适用法律问题的解释.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国票据法",
+    "slug": "negotiable-instruments-law",
+    "documentType": "法律",
+    "aliases": [
+      "票据法",
+      "汇票",
+      "本票",
+      "支票",
+      "票据权利"
+    ],
+    "articleCount": 110,
+    "baseArticleMax": 110,
+    "version": "1995年通过，2004年修正",
+    "effective": "2004年修正决定自公布之日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国票据法.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理票据纠纷案件若干问题的规定",
+    "slug": "negotiable-instruments-disputes-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "票据纠纷规定",
+      "票据司法解释",
+      "票据纠纷司法解释"
+    ],
+    "articleCount": 75,
+    "baseArticleMax": 75,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理票据纠纷案件若干问题的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理执行异议之诉案件适用法律问题的解释",
+    "slug": "execution-objection-litigation-interpretation",
+    "documentType": "司法解释",
+    "aliases": [
+      "执行异议之诉解释",
+      "执行异议之诉司法解释",
+      "执行异议诉讼解释"
+    ],
+    "articleCount": 23,
+    "baseArticleMax": 23,
+    "version": "法释〔2025〕10号",
+    "effective": "2025年7月24日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理执行异议之诉案件适用法律问题的解释.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国保险法",
+    "slug": "insurance-law",
+    "documentType": "法律",
+    "aliases": [
+      "保险法",
+      "保险合同",
+      "保险人",
+      "投保人",
+      "被保险人"
+    ],
+    "articleCount": 185,
+    "baseArticleMax": 185,
+    "version": "2009年修订，2014年、2015年修正",
+    "effective": "2015年修正决定自公布之日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国保险法.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国合伙企业法",
+    "slug": "partnership-enterprise-law",
+    "documentType": "法律",
+    "aliases": [
+      "合伙企业法",
+      "普通合伙",
+      "有限合伙",
+      "合伙事务"
+    ],
+    "articleCount": 109,
+    "baseArticleMax": 109,
+    "version": "2006年修订",
+    "effective": "2007年6月1日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国合伙企业法.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国证券法",
+    "slug": "securities-law",
+    "documentType": "法律",
+    "aliases": [
+      "证券法",
+      "证券发行",
+      "证券交易",
+      "信息披露",
+      "投资者保护"
+    ],
+    "articleCount": 226,
+    "baseArticleMax": 226,
+    "version": "2019年修订",
+    "effective": "2020年3月1日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国证券法.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国保险法〉若干问题的解释（一）",
+    "slug": "insurance-law-interpretation-1",
+    "documentType": "司法解释",
+    "aliases": [
+      "保险法解释一",
+      "保险法司法解释一",
+      "保险法解释（一）"
+    ],
+    "articleCount": 6,
+    "baseArticleMax": 6,
+    "version": "法释〔2009〕12号",
+    "effective": "2009年10月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国保险法〉若干问题的解释（一）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国保险法〉若干问题的解释（二）",
+    "slug": "insurance-law-interpretation-2",
+    "documentType": "司法解释",
+    "aliases": [
+      "保险法解释二",
+      "保险法司法解释二",
+      "保险法解释（二）"
+    ],
+    "articleCount": 21,
+    "baseArticleMax": 21,
+    "version": "2013年制定，2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国保险法〉若干问题的解释（二）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国保险法〉若干问题的解释（三）",
+    "slug": "insurance-law-interpretation-3",
+    "documentType": "司法解释",
+    "aliases": [
+      "保险法解释三",
+      "保险法司法解释三",
+      "保险法解释（三）"
+    ],
+    "articleCount": 26,
+    "baseArticleMax": 26,
+    "version": "2015年制定，2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国保险法〉若干问题的解释（三）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国保险法〉若干问题的解释（四）",
+    "slug": "insurance-law-interpretation-4",
+    "documentType": "司法解释",
+    "aliases": [
+      "保险法解释四",
+      "保险法司法解释四",
+      "保险法解释（四）"
+    ],
+    "articleCount": 21,
+    "baseArticleMax": 21,
+    "version": "2018年制定，2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国保险法〉若干问题的解释（四）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理证券市场虚假陈述侵权民事赔偿案件的若干规定",
+    "slug": "securities-false-statements-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "证券虚假陈述规定",
+      "证券虚假陈述司法解释",
+      "虚假陈述赔偿规定"
+    ],
+    "articleCount": 35,
+    "baseArticleMax": 35,
+    "version": "法释〔2022〕2号",
+    "effective": "2022年1月22日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理证券市场虚假陈述侵权民事赔偿案件的若干规定.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国涉外民事关系法律适用法",
+    "slug": "foreign-related-civil-relations-law-application-law",
+    "documentType": "法律",
+    "aliases": [
+      "涉外民事关系法律适用法",
+      "涉外法律适用法",
+      "法律适用法"
+    ],
+    "articleCount": 52,
+    "baseArticleMax": 52,
+    "version": "2010年通过",
+    "effective": "2011年4月1日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国涉外民事关系法律适用法.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国涉外民事关系法律适用法〉若干问题的解释（一）",
+    "slug": "foreign-law-application-interpretation-1",
+    "documentType": "司法解释",
+    "aliases": [
+      "涉外法律适用法解释一",
+      "法律适用法解释一",
+      "涉外司法解释一"
+    ],
+    "articleCount": 19,
+    "baseArticleMax": 19,
+    "version": "2012年制定，2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国涉外民事关系法律适用法〉若干问题的解释（一）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国涉外民事关系法律适用法〉若干问题的解释（二）",
+    "slug": "foreign-law-application-interpretation-2",
+    "documentType": "司法解释",
+    "aliases": [
+      "涉外法律适用法解释二",
+      "法律适用法解释二",
+      "外国法查明解释"
+    ],
+    "articleCount": 13,
+    "baseArticleMax": 13,
+    "version": "法释〔2023〕12号",
+    "effective": "2024年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国涉外民事关系法律适用法〉若干问题的解释（二）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理涉外民商事案件适用国际条约和国际惯例若干问题的解释",
+    "slug": "international-treaties-customs-interpretation",
+    "documentType": "司法解释",
+    "aliases": [
+      "国际条约和国际惯例解释",
+      "涉外条约惯例解释",
+      "国际条约司法解释"
+    ],
+    "articleCount": 9,
+    "baseArticleMax": 9,
+    "version": "法释〔2023〕15号",
+    "effective": "2024年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理涉外民商事案件适用国际条约和国际惯例若干问题的解释.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国电子签名法",
+    "slug": "electronic-signature-law",
+    "documentType": "法律",
+    "aliases": [
+      "电子签名法",
+      "可靠电子签名",
+      "数据电文"
+    ],
+    "articleCount": 36,
+    "baseArticleMax": 36,
+    "version": "2004年通过，2015年、2019年修正",
+    "effective": "2019年修正决定自公布之日起施行",
+    "files": [
+      "references/法律法规/中华人民共和国电子签名法.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国民事诉讼法〉的解释",
+    "slug": "civil-procedure-law-interpretation",
+    "documentType": "司法解释",
+    "aliases": [
+      "民事诉讼法解释",
+      "民诉法解释",
+      "民诉解释"
+    ],
+    "articleCount": 550,
+    "baseArticleMax": 550,
+    "version": "2015年制定，2020年、2022年修正整合文本",
+    "effective": "2022年修正自2022年4月10日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国民事诉讼法〉的解释.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定",
+    "slug": "civil-execution-seizure-freeze-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "人民法院民事执行中查封、扣押、冻结财产的规定",
+      "关于人民法院民事执行中查封、扣押、冻结财产的规定",
+      "查封规定",
+      "执行查封扣押冻结规定",
+      "查扣冻规定"
+    ],
+    "articleCount": 30,
+    "baseArticleMax": 30,
+    "version": "根据法释〔2020〕21号修改的整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于人民法院民事执行中拍卖、变卖财产的规定",
+    "slug": "civil-execution-auction-sale-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "人民法院民事执行中拍卖、变卖财产的规定",
+      "关于人民法院民事执行中拍卖、变卖财产的规定",
+      "拍卖规定",
+      "执行拍卖变卖规定",
+      "拍卖变卖规定"
+    ],
+    "articleCount": 33,
+    "baseArticleMax": 33,
+    "version": "根据法释〔2020〕21号修改的整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于人民法院民事执行中拍卖、变卖财产的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国民事诉讼法〉执行程序若干问题的解释",
+    "slug": "civil-procedure-execution-interpretation",
+    "documentType": "司法解释",
+    "aliases": [
+      "适用〈中华人民共和国民事诉讼法〉执行程序若干问题的解释",
+      "关于适用〈中华人民共和国民事诉讼法〉执行程序若干问题的解释",
+      "执行管辖规定",
+      "民诉法执行程序解释",
+      "执行程序解释"
+    ],
+    "articleCount": 27,
+    "baseArticleMax": 27,
+    "version": "根据法释〔2020〕21号修改的整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国民事诉讼法〉执行程序若干问题的解释.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定",
+    "slug": "execution-objection-review-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "人民法院办理执行异议和复议案件若干问题的规定",
+      "关于人民法院办理执行异议和复议案件若干问题的规定",
+      "执行异议规定",
+      "执行异议复议规定",
+      "执行异议和复议规定"
+    ],
+    "articleCount": 32,
+    "baseArticleMax": 32,
+    "version": "根据法释〔2020〕21号修改的整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于民事执行中变更、追加当事人若干问题的规定",
+    "slug": "execution-change-add-parties-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "民事执行中变更、追加当事人若干问题的规定",
+      "关于民事执行中变更、追加当事人若干问题的规定",
+      "变更被执行人规定",
+      "执行变更追加规定",
+      "变更追加当事人规定"
+    ],
+    "articleCount": 35,
+    "baseArticleMax": 35,
+    "version": "根据法释〔2020〕21号修改的整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于民事执行中变更、追加当事人若干问题的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于人民法院办理财产保全案件若干问题的规定",
+    "slug": "property-preservation-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "人民法院办理财产保全案件若干问题的规定",
+      "关于人民法院办理财产保全案件若干问题的规定",
+      "财产保全规定",
+      "保全规定"
+    ],
+    "articleCount": 29,
+    "baseArticleMax": 29,
+    "version": "根据法释〔2020〕21号修改的整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于人民法院办理财产保全案件若干问题的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于民事执行中财产调查若干问题的规定",
+    "slug": "execution-property-investigation-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "民事执行中财产调查若干问题的规定",
+      "关于民事执行中财产调查若干问题的规定",
+      "财产调查规定",
+      "执行财产调查规定"
+    ],
+    "articleCount": 26,
+    "baseArticleMax": 26,
+    "version": "根据法释〔2020〕21号修改的整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于民事执行中财产调查若干问题的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于执行和解若干问题的规定",
+    "slug": "execution-settlement-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "执行和解若干问题的规定",
+      "关于执行和解若干问题的规定",
+      "执行和解规定"
+    ],
+    "articleCount": 20,
+    "baseArticleMax": 20,
+    "version": "根据法释〔2020〕21号修改的整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于执行和解若干问题的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于执行担保若干问题的规定",
+    "slug": "execution-guarantee-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "执行担保若干问题的规定",
+      "关于执行担保若干问题的规定",
+      "执行担保规定"
+    ],
+    "articleCount": 16,
+    "baseArticleMax": 16,
+    "version": "根据法释〔2020〕21号修改的整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于执行担保若干问题的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国民法典〉总则编若干问题的解释",
+    "slug": "civil-code-general-provisions-interpretation",
+    "documentType": "司法解释",
+    "aliases": [
+      "民法典总则编解释",
+      "总则编司法解释",
+      "民法典总则解释"
+    ],
+    "articleCount": 39,
+    "baseArticleMax": 39,
+    "version": "法释〔2022〕6号",
+    "effective": "自2022年3月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国民法典〉总则编若干问题的解释.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国公司法〉时间效力的若干规定",
+    "slug": "company-law-time-effect-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "公司法时间效力规定",
+      "公司法时间效力司法解释",
+      "公司法溯及力规定"
+    ],
+    "articleCount": 8,
+    "baseArticleMax": 8,
+    "version": "法释〔2024〕7号",
+    "effective": "自2024年7月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国公司法〉时间效力的若干规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理民间借贷案件适用法律若干问题的规定",
+    "slug": "private-lending-interpretation",
+    "documentType": "司法解释",
+    "aliases": [
+      "民间借贷司法解释",
+      "民间借贷规定",
+      "民间借贷解释"
+    ],
+    "articleCount": 31,
+    "baseArticleMax": 31,
+    "version": "2020年第二次修正整合文本",
+    "effective": "第二次修正自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理民间借贷案件适用法律若干问题的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国公司法〉若干问题的规定（一）",
+    "slug": "company-law-interpretation-1",
+    "documentType": "司法解释",
+    "aliases": [
+      "公司法解释一",
+      "公司法司法解释一",
+      "公司法规定一"
+    ],
+    "articleCount": 6,
+    "baseArticleMax": 6,
+    "version": "2014年修正文本，并按2024年最高法答记者问标注现行衔接",
+    "effective": "2014年修正自2014年3月1日起施行；现行适用须核对2023年修订公司法",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国公司法〉若干问题的规定（一）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理存单纠纷案件的若干规定",
+    "slug": "deposit-certificate-disputes-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "存单纠纷规定",
+      "存单司法解释"
+    ],
+    "articleCount": 9,
+    "baseArticleMax": 9,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理存单纠纷案件的若干规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理与企业改制相关的民事纠纷案件若干问题的规定",
+    "slug": "enterprise-restructuring-disputes-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "企业改制纠纷规定",
+      "企业改制司法解释"
+    ],
+    "articleCount": 35,
+    "baseArticleMax": 35,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理与企业改制相关的民事纠纷案件若干问题的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理外商投资企业纠纷案件若干问题的规定（一）",
+    "slug": "foreign-invested-enterprise-disputes-interpretation-1",
+    "documentType": "司法解释",
+    "aliases": [
+      "外商投资企业纠纷解释一",
+      "外商投资解释一"
+    ],
+    "articleCount": 24,
+    "baseArticleMax": 24,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理外商投资企业纠纷案件若干问题的规定（一）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理期货纠纷案件若干问题的规定",
+    "slug": "futures-disputes-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "期货纠纷规定",
+      "期货司法解释一"
+    ],
+    "articleCount": 63,
+    "baseArticleMax": 63,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理期货纠纷案件若干问题的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理期货纠纷案件若干问题的规定（二）",
+    "slug": "futures-disputes-provisions-2",
+    "documentType": "司法解释",
+    "aliases": [
+      "期货纠纷规定二",
+      "期货司法解释二"
+    ],
+    "articleCount": 10,
+    "baseArticleMax": 10,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理期货纠纷案件若干问题的规定（二）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理信用证纠纷案件若干问题的规定",
+    "slug": "letter-of-credit-disputes-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "信用证纠纷规定",
+      "信用证司法解释"
+    ],
+    "articleCount": 18,
+    "baseArticleMax": 18,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理信用证纠纷案件若干问题的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理独立保函纠纷案件若干问题的规定",
+    "slug": "independent-guarantee-disputes-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "独立保函纠纷规定",
+      "独立保函司法解释",
+      "独立保函规定"
+    ],
+    "articleCount": 26,
+    "baseArticleMax": 26,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理独立保函纠纷案件若干问题的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理银行卡民事纠纷案件若干问题的规定",
+    "slug": "bank-card-civil-disputes-provisions",
+    "documentType": "司法解释",
+    "aliases": [
+      "银行卡民事纠纷规定",
+      "银行卡司法解释",
+      "银行卡纠纷规定"
+    ],
+    "articleCount": 16,
+    "baseArticleMax": 16,
+    "version": "法释〔2021〕10号",
+    "effective": "自2021年5月25日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理银行卡民事纠纷案件若干问题的规定.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理融资租赁合同纠纷案件适用法律问题的解释",
+    "slug": "financial-leasing-contract-interpretation",
+    "documentType": "司法解释",
+    "aliases": [
+      "融资租赁司法解释",
+      "融资租赁合同解释",
+      "融资租赁解释"
+    ],
+    "articleCount": 15,
+    "baseArticleMax": 15,
+    "version": "2020年修正整合文本",
+    "effective": "修改决定自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理融资租赁合同纠纷案件适用法律问题的解释.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国市场主体登记管理条例",
+    "slug": "market-entity-registration-regulation",
+    "documentType": "行政法规",
+    "aliases": [
+      "市场主体登记管理条例",
+      "经营主体登记管理条例",
+      "市场主体登记条例"
+    ],
+    "articleCount": 55,
+    "baseArticleMax": 55,
+    "version": "国务院令第746号",
+    "effective": "自2022年3月1日起施行",
+    "files": [
+      "references/行政法规/中华人民共和国市场主体登记管理条例.md"
+    ]
+  },
+  {
+    "name": "中华人民共和国市场主体登记管理条例实施细则",
+    "slug": "market-entity-registration-implementation-rules",
+    "documentType": "部门规章",
+    "aliases": [
+      "市场主体登记管理条例实施细则",
+      "经营主体登记实施细则",
+      "登记管理实施细则"
+    ],
+    "articleCount": 82,
+    "baseArticleMax": 82,
+    "version": "国家市场监督管理总局令第52号",
+    "effective": "自2022年3月1日起施行",
+    "files": [
+      "references/部门规章/中华人民共和国市场主体登记管理条例实施细则.md"
+    ]
+  },
+  {
+    "name": "公司登记管理实施办法",
+    "slug": "company-registration-management-measures",
+    "documentType": "部门规章",
+    "aliases": [
+      "公司登记管理办法",
+      "公司登记实施办法",
+      "公司登记办法"
+    ],
+    "articleCount": 29,
+    "baseArticleMax": 29,
+    "version": "国家市场监督管理总局令第95号",
+    "effective": "自2025年2月10日起施行",
+    "files": [
+      "references/部门规章/公司登记管理实施办法.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于适用〈中华人民共和国民法典〉物权编的解释（一）",
+    "slug": "civil-code-property-book-interpretation-1",
+    "documentType": "司法解释",
+    "aliases": [
+      "民法典物权编解释一",
+      "物权编解释一",
+      "物权编司法解释"
+    ],
+    "articleCount": 21,
+    "baseArticleMax": 21,
+    "version": "法释〔2020〕24号",
+    "effective": "自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于适用〈中华人民共和国民法典〉物权编的解释（一）.md"
+    ]
+  },
+  {
+    "name": "最高人民法院关于审理预付式消费民事纠纷案件适用法律若干问题的解释",
+    "slug": "prepaid-consumption-disputes-interpretation",
+    "documentType": "司法解释",
+    "aliases": [
+      "预付式消费司法解释",
+      "预付消费解释",
+      "预付卡消费解释"
+    ],
+    "articleCount": 27,
+    "baseArticleMax": 27,
+    "version": "法释〔2025〕4号",
+    "effective": "自2025年5月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理预付式消费民事纠纷案件适用法律若干问题的解释.md"
+    ]
   }
 ]

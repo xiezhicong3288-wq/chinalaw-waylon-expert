@@ -73,6 +73,7 @@ def create_workspace(
         "risks": [],
         "actions": [],
         "openQuestions": [],
+        "reasoning": [],
     }
     if profile == "commercial":
         model["commercialProfileVersion"] = 1

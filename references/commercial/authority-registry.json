@@ -1,0 +1,1334 @@
+[
+  {
+    "id": "CA01",
+    "title": "中华人民共和国公司法（2023年修订）",
+    "authority": "全国人民代表大会常务委员会",
+    "type": "法律",
+    "effective": "2024-07-01",
+    "url": "https://cicc.court.gov.cn/html/1/380/385/12910.html",
+    "topics": [
+      "公司设立",
+      "出资",
+      "股东权利",
+      "公司治理",
+      "决议",
+      "董监高责任",
+      "清算"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先按法律事实发生时间核时间效力；公司决议、登记和善意第三人关系分别分析。"
+  },
+  {
+    "id": "CA02",
+    "title": "最高人民法院关于适用〈中华人民共和国公司法〉时间效力的若干规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2024-07-01",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/436481.html",
+    "topics": [
+      "新旧法衔接",
+      "公司决议",
+      "股权转让",
+      "利润分配",
+      "减资",
+      "清算责任"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "按法律事实而非公司成立日期机械选择新旧公司法。"
+  },
+  {
+    "id": "CA03",
+    "title": "最高人民法院关于修改二十九件商事类司法解释的决定",
+    "authority": "最高人民法院",
+    "type": "司法解释修改决定及整合文本",
+    "effective": "2021-01-01",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "公司法解释二至五",
+      "票据",
+      "破产",
+      "保险",
+      "独立保函",
+      "外商投资"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "公司法解释一至五仍须与2023年修订公司法及时间效力规定进行冲突检查；修改决定还汇集多类商事解释。"
+  },
+  {
+    "id": "CA04",
+    "title": "全国法院民商事审判工作会议纪要",
+    "authority": "最高人民法院",
+    "type": "司法政策文件",
+    "effective": "2019-11-08",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/199691.html",
+    "topics": [
+      "公司",
+      "合同",
+      "担保",
+      "金融消费者",
+      "证券",
+      "信托",
+      "票据",
+      "破产"
+    ],
+    "status": "official_source_located",
+    "usageNote": "不是司法解释，不能作为裁判依据援引；可在说理中用于理解统一裁判思路，并须检查民法典及后续司法解释是否已替代。"
+  },
+  {
+    "id": "CA05",
+    "title": "最高人民法院关于适用〈中华人民共和国民法典〉合同编通则若干问题的解释",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2023-12-05",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/419382.html",
+    "topics": [
+      "合同解释",
+      "合同成立",
+      "合同效力",
+      "代理",
+      "代位权",
+      "撤销权",
+      "解除",
+      "违约损失",
+      "定金"
+    ],
+    "status": "official_source_located",
+    "usageNote": "合同案件的通用入口；分则合同另查对应司法解释。"
+  },
+  {
+    "id": "CA06",
+    "title": "最高人民法院关于适用〈中华人民共和国民法典〉有关担保制度的解释",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2021-01-01",
+    "url": "https://cicc.court.gov.cn/html/1/380/385/12834.html",
+    "topics": [
+      "保证",
+      "抵押",
+      "质押",
+      "非典型担保",
+      "公司担保",
+      "保证期间",
+      "担保物权实现"
+    ],
+    "status": "official_source_located",
+    "usageNote": "区分担保合同效力、担保物权设立、公司内部决议、善意相对人及责任范围。"
+  },
+  {
+    "id": "CA07",
+    "title": "最高人民法院关于审理民间借贷案件适用法律若干问题的规定（2020年修正）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2020-08-20",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/249031.html",
+    "topics": [
+      "借款成立",
+      "职业放贷",
+      "高利转贷",
+      "利率保护",
+      "企业借贷",
+      "民刑交叉"
+    ],
+    "status": "official_source_located",
+    "usageNote": "利息、逾期利率和费用应按合同成立及履行时间分别核对LPR口径和后续修订。"
+  },
+  {
+    "id": "CA08",
+    "title": "中华人民共和国企业破产法",
+    "authority": "全国人民代表大会常务委员会",
+    "type": "法律",
+    "effective": "2007-06-01",
+    "url": "https://xzfy.moj.gov.cn/c/2021-01-06/487747.shtml",
+    "topics": [
+      "破产受理",
+      "管理人",
+      "债务人财产",
+      "撤销权",
+      "债权申报",
+      "重整",
+      "和解",
+      "清算"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "合同诉讼、执行与破产受理后的程序效果必须联动审查。现行条文仍为2006年通过文本；修订草案正在审议，尚未生效，不得作为现行裁判依据。"
+  },
+  {
+    "id": "CA09",
+    "title": "最高人民法院关于适用〈中华人民共和国企业破产法〉若干问题的规定（三）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2021-01-01（2020年修正整合文本）",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "共益债务",
+      "债权人知情权",
+      "债权人会议",
+      "重大财产处分"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "使用2020年修正整合文本；与司法解释一、二及企业破产法合读，分别核对借款、债权核查、会议表决和重大财产处分。"
+  },
+  {
+    "id": "CA10",
+    "title": "最高人民法院关于审理证券市场虚假陈述侵权民事赔偿案件的若干规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2022-01-22",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/343221.html",
+    "topics": [
+      "虚假陈述",
+      "重大性",
+      "交易因果关系",
+      "损失因果关系",
+      "损失计算",
+      "中介责任"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "证券索赔不能只凭行政处罚；逐项证明虚假陈述、重大性、因果关系、损失及责任主体。"
+  },
+  {
+    "id": "CA11",
+    "title": "中华人民共和国票据法",
+    "authority": "全国人民代表大会常务委员会",
+    "type": "法律",
+    "effective": "2004-08-28修正，官方政策法规库标注全文有效",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5211816/content.html",
+    "topics": [
+      "汇票",
+      "本票",
+      "支票",
+      "票据权利",
+      "追索",
+      "伪造变造",
+      "公示催告"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "与CA03中的票据司法解释整合文本合读，严格区分票据关系与基础关系；签章、背书连续、善恶意、抗辩切断和票据权利时效分别核对。"
+  },
+  {
+    "id": "CA12",
+    "title": "修改后的民事案件案由规定（2025年第三次修正）",
+    "authority": "最高人民法院",
+    "type": "司法规范性文件",
+    "effective": "2026-01-01",
+    "url": "https://ipc.court.gov.cn/zh-cn/news/view-5111.html",
+    "topics": [
+      "案由",
+      "公司证照返还",
+      "公司决议",
+      "涤除登记",
+      "商事纠纷分类"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "案由由法院根据诉争法律关系确定；案由名称不能代替请求权基础和构成要件分析。"
+  },
+  {
+    "id": "CA13",
+    "title": "指导案例10号：公司决议撤销纠纷",
+    "authority": "最高人民法院",
+    "type": "指导性案例",
+    "effective": "2012-09-18发布",
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/13307.html",
+    "topics": [
+      "公司决议撤销",
+      "司法审查范围",
+      "公司自治"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "基于旧公司法条号；使用裁判要点时更新法条并核事实相似性。"
+  },
+  {
+    "id": "CA14",
+    "title": "指导案例8号：公司解散纠纷",
+    "authority": "最高人民法院",
+    "type": "指导性案例",
+    "effective": "2012年发布",
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/4221.html",
+    "topics": [
+      "公司僵局",
+      "经营管理严重困难",
+      "公司解散",
+      "替代救济"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "经营是否盈利不单独决定公司治理机制是否严重困难；强制解散仍是最后手段。"
+  },
+  {
+    "id": "CA15",
+    "title": "最高人民法院首批依法保护外商投资权益典型案例中的证照返还行为保全案",
+    "authority": "最高人民法院",
+    "type": "典型案例",
+    "effective": "公开案例",
+    "url": "https://cicc.court.gov.cn/html/1/218/62/163/425/12926.html",
+    "topics": [
+      "公司证照返还",
+      "行为保全",
+      "印章",
+      "第三方保管"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "不是指导性案例；独资股东决定、董事会决议、拒绝交接和持续对外行为是重要限定事实。"
+  },
+  {
+    "id": "CA16",
+    "title": "最高人民法院关于适用〈中华人民共和国涉外民事关系法律适用法〉若干问题的解释（二）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2024-01-01",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/419042.html",
+    "topics": [
+      "外国法查明",
+      "涉外商事",
+      "法律适用"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "当事人选择外国法与未选择外国法时的提供、查明责任不同。"
+  },
+  {
+    "id": "CA17",
+    "title": "最高人民法院关于审理买卖合同纠纷案件适用法律问题的解释（2020年修正）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2021-01-01",
+    "url": "https://cicc.court.gov.cn/html/1/380/385/12840.html",
+    "topics": [
+      "买卖合同",
+      "无权处分",
+      "交付",
+      "所有权保留",
+      "检验",
+      "违约责任"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "与民法典合同编通则解释合读；按交付、检验、异议、结算和风险转移分别组织事实与证据。"
+  },
+  {
+    "id": "CA18",
+    "title": "最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（一）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2021-01-01",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/282111.html",
+    "topics": [
+      "建设工程",
+      "合同效力",
+      "工期",
+      "质量",
+      "结算",
+      "司法鉴定",
+      "优先受偿"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "须与2026年建工解释（二）合读；后者与既有解释不一致的，以后者为准。"
+  },
+  {
+    "id": "CA19",
+    "title": "最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（二）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2026-06-30",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/504221.html",
+    "topics": [
+      "建设工程",
+      "招投标",
+      "借用资质",
+      "折价补偿",
+      "固定总价",
+      "审计",
+      "质量保证金",
+      "优先受偿"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "适用于施行后新受理的一审建设工程施工合同纠纷；与此前司法解释不一致的，以本解释为准。"
+  },
+  {
+    "id": "CA20",
+    "title": "最高人民法院建设工程施工合同纠纷典型案例（2026）",
+    "authority": "最高人民法院",
+    "type": "典型案例",
+    "effective": "2026-06-29发布",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/504211.html",
+    "topics": [
+      "借用资质",
+      "农民工工资",
+      "固定总价",
+      "司法鉴定",
+      "质量保证金",
+      "合同僵局"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "用于解释建工解释（二）的事实适用边界；不是指导性案例，不能替代法条和个案要件审查。"
+  },
+  {
+    "id": "CA22",
+    "title": "最高人民法院关于审理城镇房屋租赁合同纠纷案件具体应用法律若干问题的解释（2020年修正）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2021-01-01",
+    "url": "https://gongbao.court.gov.cn/Details/1ba2a85c913753569685966e8ee1e6.html",
+    "topics": [
+      "房屋租赁",
+      "合同效力",
+      "装饰装修",
+      "一房多租",
+      "买卖不破租赁",
+      "占有使用费"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先核房屋规划与临时建筑状态，再分别处理效力、占有使用费、装修扩建、腾退和优先购买。"
+  },
+  {
+    "id": "CA23",
+    "title": "最高人民法院关于审理技术合同纠纷案件适用法律若干问题的解释",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "现行文本需提交前复核",
+    "url": "https://ipc.court.gov.cn/zh-cn/news/view-390.html",
+    "topics": [
+      "技术开发",
+      "技术转让",
+      "技术许可",
+      "技术咨询",
+      "技术服务",
+      "管辖"
+    ],
+    "status": "official_source_located",
+    "usageNote": "该官方页面展示早期文本；提交前须结合2020年知识产权司法解释修改决定核对整合后的现行条文和民法典条号。"
+  },
+  {
+    "id": "CA24",
+    "title": "最高人民法院关于适用〈中华人民共和国保险法〉若干问题的解释（二）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2013-06-08",
+    "url": "https://gongbao.court.gov.cn/Details/f1afd4d30b532b6fc25f68a50fb90f.html",
+    "topics": [
+      "保险合同",
+      "保险利益",
+      "告知义务",
+      "格式条款",
+      "提示说明",
+      "理赔"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "与保险法及解释一、三、四合读；格式条款需分别审查是否订入合同、是否履行提示和明确说明、内容是否有效。"
+  },
+  {
+    "id": "CA25",
+    "title": "最高人民法院关于审理预付式消费民事纠纷案件适用法律若干问题的解释",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2025-05-01",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/459321.html",
+    "topics": [
+      "预付式消费",
+      "经营者责任",
+      "职业闭店",
+      "退款",
+      "惩罚性赔偿"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "识别名义经营者、实际经营者、特许经营和商场平台责任，核对卡项、履行、余额、转让与闭店安排。"
+  },
+  {
+    "id": "CA26",
+    "title": "最高人民法院发布2026年人民法院反垄断典型案例",
+    "authority": "最高人民法院",
+    "type": "典型案例",
+    "effective": "2026-09-10发布",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/511401.html",
+    "topics": [
+      "反垄断",
+      "相关市场",
+      "限定交易",
+      "差别待遇",
+      "不公平高价",
+      "民事行政衔接"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "用于事实比较和问题发现；市场界定、支配地位、行为、效果、抗辩和损害仍须依反垄断法及司法解释逐项证明。"
+  },
+  {
+    "id": "CA27",
+    "title": "最高人民法院发布2026年人民法院反不正当竞争典型案例",
+    "authority": "最高人民法院",
+    "type": "典型案例",
+    "effective": "2026-09-09发布",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/511301.html",
+    "topics": [
+      "仿冒混淆",
+      "商业秘密",
+      "商业诋毁",
+      "虚假宣传",
+      "网络不正当竞争",
+      "一般条款"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "结合2025年修订反不正当竞争法核对行为发生时间；典型案例只作相似事实比较和说理参考。"
+  },
+  {
+    "id": "CA28",
+    "title": "最高人民法院依法规范平台经营、保护消费者合法权益典型案例",
+    "authority": "最高人民法院",
+    "type": "典型案例",
+    "effective": "2026-08-03发布",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/507691.html",
+    "topics": [
+      "平台经营",
+      "直播带货",
+      "网络买卖",
+      "保证金",
+      "消费者权益"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "区分销售者、直播运营者、平台和支付等主体各自承诺与法定义务，不能因同处平台交易即推定连带责任。"
+  },
+  {
+    "id": "CA29",
+    "title": "最高人民法院关于适用2023年修订公司法时间效力问题答记者问",
+    "authority": "最高人民法院",
+    "type": "司法解释理解文件",
+    "effective": "2024-06-30发布",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/438551.html",
+    "topics": [
+      "公司法",
+      "时间效力",
+      "公司法解释一至五",
+      "条号映射",
+      "冲突规则"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "五部旧公司法司法解释尚未废止；与2023年公司法冲突时适用公司法，条号引用须映射为新公司法条号。答记者问用于理解，不能替代司法解释正文。"
+  },
+  {
+    "id": "CA30",
+    "title": "最高人民法院关于适用〈中华人民共和国企业破产法〉若干问题的规定（一）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2011-09-26",
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/3272.html",
+    "topics": [
+      "破产原因",
+      "不能清偿到期债务",
+      "明显缺乏清偿能力",
+      "申请受理",
+      "举证责任"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "债权人申请破产时核对债权成立、到期和未清偿；账面资大于债不当然排除明显缺乏清偿能力。"
+  },
+  {
+    "id": "CA31",
+    "title": "最高人民法院关于适用〈中华人民共和国企业破产法〉若干问题的规定（二）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2021-01-01（2020年修正整合文本）",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "债务人财产",
+      "执行回转",
+      "保全解除",
+      "撤销权",
+      "取回权",
+      "抵销权",
+      "衍生诉讼"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "在诉讼、保全、执行与破产并行时逐项核对财产归属、程序中止、管理人权利和破产法院集中管辖。"
+  },
+  {
+    "id": "CA32",
+    "title": "最高人民法院关于审理执行异议之诉案件适用法律问题的解释",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2025-07-24",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/471731.html",
+    "topics": [
+      "执行异议之诉",
+      "案外人",
+      "排除执行",
+      "确权",
+      "查封",
+      "破产衔接",
+      "虚假诉讼"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先区分执行异议审查、案外人或申请执行人异议之诉以及独立确权给付诉讼；逐项核对十五日起诉期、当事人、权益取得时点、价款、占有、登记原因和破产受理影响。"
+  },
+  {
+    "id": "CA33",
+    "title": "中华人民共和国保险法",
+    "authority": "全国人民代表大会常务委员会",
+    "type": "法律",
+    "effective": "2015-04-24修正",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_4c715a53f3d4402c89f62ae77809f638.html",
+    "topics": [
+      "保险合同",
+      "免责条款",
+      "如实告知",
+      "理赔",
+      "代位求偿",
+      "责任保险"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "按保险类型、事故、承保范围、免责条款提示说明、通知和材料提交、损失、理赔期限及代位权逐项审查。"
+  },
+  {
+    "id": "CA34",
+    "title": "中华人民共和国合伙企业法",
+    "authority": "全国人民代表大会常务委员会",
+    "type": "法律",
+    "effective": "2007-06-01",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_28f19c7b1d204e69a131292d0b793078.html",
+    "topics": [
+      "普通合伙",
+      "有限合伙",
+      "合伙事务",
+      "对外代表",
+      "退伙",
+      "债务责任"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先定合伙类型和协议效力，再核对事务执行权限、对外代表、善意第三人、利润亏损分担、入退伙及债务责任。"
+  },
+  {
+    "id": "CA35",
+    "title": "中华人民共和国证券法",
+    "authority": "全国人民代表大会常务委员会",
+    "type": "法律",
+    "effective": "2020-03-01",
+    "url": "https://www.npc.gov.cn/c2/c30834/201912/t20191231_304436.html",
+    "topics": [
+      "证券发行",
+      "信息披露",
+      "虚假陈述",
+      "内幕交易",
+      "操纵市场",
+      "投资者保护"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先识别发行交易阶段与责任主体；民事索赔还要核对虚假陈述等专门司法解释、因果关系、损失计算和代表人诉讼程序。"
+  },
+  {
+    "id": "CA36",
+    "title": "最高人民法院关于适用〈中华人民共和国保险法〉若干问题的解释（一）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2009年10月1日起施行",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/71.html",
+    "topics": [
+      "保险法时间效力",
+      "旧合同",
+      "未决案件",
+      "保险事故",
+      "理赔"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先区分保险合同成立、保险事故发生和案件终审时间，再决定适用修订前或2009年保险法。"
+  },
+  {
+    "id": "CA37",
+    "title": "最高人民法院关于适用〈中华人民共和国保险法〉若干问题的解释（二）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "保险合同",
+      "代签追认",
+      "如实告知",
+      "免责条款",
+      "提示说明",
+      "理赔期间"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "重点核对代签追认、询问告知范围、免责条款性质、提示说明方式及其举证、文本冲突和三十日核定期间。"
+  },
+  {
+    "id": "CA38",
+    "title": "最高人民法院关于适用〈中华人民共和国保险法〉若干问题的解释（三）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "人身保险",
+      "保险利益",
+      "被保险人同意",
+      "受益人",
+      "保单现金价值",
+      "医疗费用"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "核对被保险人同意与保险利益、合同复效、受益人指定变更、保险金与遗产、医疗费用和现金价值强制执行。"
+  },
+  {
+    "id": "CA39",
+    "title": "最高人民法院关于适用〈中华人民共和国保险法〉若干问题的解释（四）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "财产保险",
+      "标的转让",
+      "危险增加",
+      "代位求偿",
+      "责任保险",
+      "诉讼时效"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "核对标的转让、危险显著增加、重复保险、代位求偿、共同侵权和责任保险第三人的直接请求。"
+  },
+  {
+    "id": "CA40",
+    "title": "最高人民法院关于审理证券市场虚假陈述侵权民事赔偿案件的若干规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2022-01-22",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/343221.html",
+    "topics": [
+      "证券虚假陈述",
+      "信息披露",
+      "重大性",
+      "交易因果关系",
+      "勤勉尽责",
+      "损失计算",
+      "诉讼时效"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "按虚假陈述认定、重大性、交易因果关系、责任主体过错、实施揭露更正日、系统风险扣除、损失和代表人诉讼时效逐项证明。"
+  },
+  {
+    "id": "CA41",
+    "title": "中华人民共和国涉外民事关系法律适用法",
+    "authority": "全国人民代表大会常务委员会",
+    "type": "法律",
+    "effective": "2011-04-01",
+    "url": "https://cicc.court.gov.cn/html/1/218/62/83/442.html",
+    "topics": [
+      "涉外民事关系",
+      "法律选择",
+      "强制性规定",
+      "公共利益",
+      "外国法查明",
+      "最密切联系"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "合同选法须有法律授权并以明示方式作出；程序问题、仲裁协议、票据海商等特别规则应单独核对。"
+  },
+  {
+    "id": "CA42",
+    "title": "最高人民法院关于适用〈中华人民共和国涉外民事关系法律适用法〉若干问题的解释（一）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2021-01-01（2020年修正）",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "涉外因素",
+      "特别法",
+      "法律选择",
+      "强制性规定",
+      "法律规避",
+      "外国法查明"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "逐一拆分案件中的不同涉外关系，分别确定准据法；会议纪要或当事人约定不能替代法定选法规则。"
+  },
+  {
+    "id": "CA43",
+    "title": "最高人民法院关于适用〈中华人民共和国涉外民事关系法律适用法〉若干问题的解释（二）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2024-01-01",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/419042.html",
+    "topics": [
+      "外国法查明",
+      "查明责任",
+      "专家意见",
+      "判例法",
+      "查明费用",
+      "不能查明"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "当事人选择外国法时负提供义务；未选择时法院承担查明责任，不能仅以当事人未协助为由认定不能查明。"
+  },
+  {
+    "id": "CA44",
+    "title": "最高人民法院关于审理涉外民商事案件适用国际条约和国际惯例若干问题的解释",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2024-01-01",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/421922.html",
+    "topics": [
+      "国际条约",
+      "国际惯例",
+      "涉外商事",
+      "条约保留",
+      "公共利益",
+      "合同并入"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先核对中国缔结或参加状态、保留声明和争议事项范围；合同援引条约文本与条约作为准据法应区分。"
+  },
+  {
+    "id": "CA45",
+    "title": "中华人民共和国电子签名法",
+    "authority": "全国人民代表大会常务委员会",
+    "type": "法律",
+    "effective": "2019-04-23修正",
+    "url": "https://www.miit.gov.cn/jgsj/zfs/fl/art/2022/art_e3f623f70c23497e88a941170093446a.html",
+    "topics": [
+      "电子签名",
+      "数据电文",
+      "可靠性",
+      "原件",
+      "发送接收",
+      "电子认证"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先核文书是否排除电子形式，再查生成与控制、签后改动、系统日志、认证证书、发送接收规则及代表权限。"
+  },
+  {
+    "id": "CA46",
+    "title": "最高人民法院关于适用〈中华人民共和国民事诉讼法〉的解释",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2022年修正自2022年4月10日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/353651.html",
+    "topics": [
+      "管辖",
+      "诉讼参加人",
+      "证据",
+      "保全",
+      "执行异议之诉",
+      "再审",
+      "执行",
+      "涉外程序"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先按程序阶段定位章节；条文引用须同时核对现行民事诉讼法条号、2023年涉外编修法及其后专项司法解释。"
+  },
+  {
+    "id": "CA47",
+    "title": "最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282661.html",
+    "topics": [
+      "查封",
+      "扣押",
+      "冻结",
+      "轮候查封",
+      "不得查封",
+      "解除查封"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "逐项核对财产权属、可执行性、超标的查封、查封期限、轮候顺位、保管使用与解除条件。"
+  },
+  {
+    "id": "CA48",
+    "title": "最高人民法院关于人民法院民事执行中拍卖、变卖财产的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282661.html",
+    "topics": [
+      "拍卖",
+      "变卖",
+      "评估",
+      "竞买",
+      "以物抵债",
+      "价款分配"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "审查评估拍卖程序、保留价、竞买资格、成交裁定、悔拍责任、抵债和流拍后的解除措施。"
+  },
+  {
+    "id": "CA49",
+    "title": "最高人民法院关于适用〈中华人民共和国民事诉讼法〉执行程序若干问题的解释",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282661.html",
+    "topics": [
+      "执行管辖",
+      "执行异议",
+      "执行复议",
+      "迟延履行",
+      "分配方案",
+      "财产所在地"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "区分执行行为异议、案外人异议和分配方案异议；管辖、申请期、复议期及执行时效分别核对。"
+  },
+  {
+    "id": "CA50",
+    "title": "最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282661.html",
+    "topics": [
+      "执行异议",
+      "执行复议",
+      "案外人",
+      "排除执行",
+      "登记",
+      "占有",
+      "优先受偿"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先识别民诉法执行行为异议或案外人异议路径，再核期限、主体、权利外观、取得时间、价款、占有及后续诉讼。"
+  },
+  {
+    "id": "CA51",
+    "title": "最高人民法院关于民事执行中变更、追加当事人若干问题的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282661.html",
+    "topics": [
+      "变更被执行人",
+      "追加被执行人",
+      "公司股东",
+      "个人独资",
+      "合伙",
+      "抽逃出资"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "追加责任须严格落入法定类型并受责任范围限制；不能以执行追加替代需要实体审理的公司、出资或侵权诉讼。"
+  },
+  {
+    "id": "CA52",
+    "title": "最高人民法院关于人民法院办理财产保全案件若干问题的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282661.html",
+    "topics": [
+      "财产保全",
+      "担保",
+      "网络查控",
+      "超标的保全",
+      "续行保全",
+      "保全错误"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "核请求基础、紧急性、财产线索、担保、比例、期限、续保、置换和错误保全损害，避免把保全等同实体胜诉。"
+  },
+  {
+    "id": "CA53",
+    "title": "最高人民法院关于民事执行中财产调查若干问题的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282661.html",
+    "topics": [
+      "财产调查",
+      "财产报告",
+      "网络查控",
+      "审计",
+      "悬赏",
+      "律师调查令"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "组合使用财产报告、网络查控、审计、悬赏和调查令；记录线索来源、查询范围、时间和可处分性。"
+  },
+  {
+    "id": "CA54",
+    "title": "最高人民法院关于执行和解若干问题的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282661.html",
+    "topics": [
+      "执行和解",
+      "履行",
+      "恢复执行",
+      "另行起诉",
+      "担保",
+      "执行外和解"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "区分执行和解协议与执行外和解，明确履行、恢复执行、另诉、担保与原生效文书的关系。"
+  },
+  {
+    "id": "CA55",
+    "title": "最高人民法院关于执行担保若干问题的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282661.html",
+    "topics": [
+      "执行担保",
+      "暂缓执行",
+      "保证",
+      "担保物",
+      "恢复执行",
+      "担保责任"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "核担保书、同意、期限、范围和担保财产，区分执行担保、执行和解担保与民事实体保证。"
+  },
+  {
+    "id": "CA56",
+    "title": "最高人民法院关于适用〈中华人民共和国民法典〉总则编若干问题的解释",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "自2022年3月1日起施行",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/347221.html",
+    "topics": [
+      "权利滥用",
+      "民事行为能力",
+      "意思表示",
+      "重大误解",
+      "欺诈胁迫",
+      "无权代理",
+      "表见代理",
+      "诉讼时效"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先核民法典各分编和特别法是否已有规定；代理争议逐项审查权源外观、相对人善意无过失及举证责任。"
+  },
+  {
+    "id": "CA57",
+    "title": "最高人民法院关于适用〈中华人民共和国公司法〉时间效力的若干规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "自2024年7月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/436481.html",
+    "topics": [
+      "公司法时间效力",
+      "有利溯及",
+      "跨法履行",
+      "新增规则",
+      "清算责任",
+      "再审"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先锁定法律事实和持续履行时点，再依不溯及、有利溯及、新增规则、细化规则和既判力分层判断。"
+  },
+  {
+    "id": "CA58",
+    "title": "最高人民法院关于审理民间借贷案件适用法律若干问题的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "第二次修正自2021年1月1日起施行",
+    "url": "https://cicc.court.gov.cn/html/1/218/62/84/12844.html",
+    "topics": [
+      "借贷成立",
+      "借贷效力",
+      "借据转账",
+      "虚假诉讼",
+      "法定代表人借款",
+      "本金",
+      "利率",
+      "逾期利息"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "分开证明借贷合意与款项交付，核资金来源流向、主体用途、刑民交叉、担保身份和合同成立时及起诉时的利率规则。"
+  },
+  {
+    "id": "CA59",
+    "title": "最高人民法院关于适用〈中华人民共和国公司法〉若干问题的规定（一）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "2014年修正自2014年3月1日起施行；现行适用须核对2023年修订公司法",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/1045.html",
+    "topics": [
+      "公司法时间效力",
+      "决议撤销期限",
+      "股东代表诉讼",
+      "连续持股",
+      "再审"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "该解释仍未废止，但旧法条号及与新公司法冲突内容须按法释〔2024〕7号和最高法2024年答记者问映射核对。"
+  },
+  {
+    "id": "CA60",
+    "title": "最高人民法院关于审理存单纠纷案件的若干规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "存单",
+      "存款关系",
+      "资金占用",
+      "金融机构",
+      "虚假存单"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "区分真实存款关系、以存单为表现形式的借贷和资金被占用；同步审查金融机构过错、资金流向及刑民交叉。"
+  },
+  {
+    "id": "CA61",
+    "title": "最高人民法院关于审理与企业改制相关的民事纠纷案件若干问题的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "企业改制",
+      "产权出售",
+      "企业分立",
+      "公司制改造",
+      "债务承担"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先还原改制方式、资产和债务承接、公告通知及工商变更，再判断原企业、受让人、开办单位和新设主体责任。"
+  },
+  {
+    "id": "CA62",
+    "title": "最高人民法院关于审理外商投资企业纠纷案件若干问题的规定（一）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "外商投资",
+      "审批登记",
+      "股权转让",
+      "隐名投资",
+      "股权质押"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "区分合同效力、行政批准或登记、投资者资格、实际出资和对外公示；同时核外商投资法及准入特别管理措施。"
+  },
+  {
+    "id": "CA63",
+    "title": "最高人民法院关于审理期货纠纷案件若干问题的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "期货交易",
+      "强行平仓",
+      "保证金",
+      "透支交易",
+      "期货经纪",
+      "责任承担"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "结合期货和衍生品法、监管规则、交易所规则与合同，逐笔复核指令、保证金、风险通知、强平条件、成交记录和损失因果。"
+  },
+  {
+    "id": "CA64",
+    "title": "最高人民法院关于审理期货纠纷案件若干问题的规定（二）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "期货管辖",
+      "期货保全",
+      "期货执行",
+      "保证金账户",
+      "席位"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "用于期货纠纷管辖、保全和执行；财产性质、账户权属和交易所结算顺位须结合现行特别法及业务规则核验。"
+  },
+  {
+    "id": "CA65",
+    "title": "最高人民法院关于审理信用证纠纷案件若干问题的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "信用证",
+      "独立抽象性",
+      "单证相符",
+      "信用证欺诈",
+      "止付"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "坚持信用证独立性和严格相符原则，分别审查交单、拒付、欺诈例外、善意第三人、止付条件及国际惯例版本。"
+  },
+  {
+    "id": "CA66",
+    "title": "最高人民法院关于审理独立保函纠纷案件若干问题的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282631.html",
+    "topics": [
+      "独立保函",
+      "见索即付",
+      "欺诈例外",
+      "止付",
+      "追偿"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先识别独立保函而非从属性保证，审查单据条件、付款请求、欺诈例外、止付门槛、境外保函及开立人追偿。"
+  },
+  {
+    "id": "CA21",
+    "title": "最高人民法院关于审理银行卡民事纠纷案件若干问题的规定",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "自2021年5月25日起施行",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/304771.html",
+    "topics": [
+      "银行卡",
+      "网络盗刷",
+      "伪卡盗刷",
+      "举证责任",
+      "格式条款",
+      "损失分担"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "区分本人或授权交易、伪卡盗刷与网络盗刷；以交易技术信息、真卡位置、报警挂失和安全义务分配举证责任。"
+  },
+  {
+    "id": "CA67",
+    "title": "最高人民法院关于审理融资租赁合同纠纷案件适用法律问题的解释",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "修改决定自2021年1月1日起施行",
+    "url": "https://cicc.court.gov.cn/html/1/380/385/12843.html",
+    "topics": [
+      "融资租赁",
+      "售后回租",
+      "租赁物",
+      "租金",
+      "解除",
+      "担保功能"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "先穿透判断是否真实构成融资租赁，再审买卖与租赁双合同、租赁物公示、租金加速到期、解除和担保功能实现。"
+  },
+  {
+    "id": "CA68",
+    "title": "中华人民共和国市场主体登记管理条例",
+    "authority": "国务院",
+    "type": "行政法规",
+    "effective": "自2022年3月1日起施行",
+    "url": "https://app.www.gov.cn/govdata/gov/202108/24/475109/article.html",
+    "topics": [
+      "市场主体登记",
+      "营业执照",
+      "变更登记",
+      "虚假登记",
+      "撤销登记",
+      "登记档案"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "用于核对登记事项、申请责任、营业执照、变更备案、实名核验、虚假登记撤销、档案查询及登记机关协助执行；登记事实不替代民事决议效力判断。"
+  },
+  {
+    "id": "CA69",
+    "title": "中华人民共和国市场主体登记管理条例实施细则",
+    "authority": "国家市场监督管理总局",
+    "type": "部门规章",
+    "effective": "自2022年3月1日起施行",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_37bd9ff741584f9289394193fe2c3c3a.html",
+    "topics": [
+      "登记申请",
+      "法定代表人",
+      "变更登记",
+      "营业执照",
+      "虚假登记",
+      "撤销登记",
+      "协助执行"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "细化登记申请人、签署主体、受理审查、变更注销、营业执照管理、虚假登记调查撤销、档案查询和生效裁判协助执行。"
+  },
+  {
+    "id": "CA70",
+    "title": "公司登记管理实施办法",
+    "authority": "国家市场监督管理总局",
+    "type": "部门规章",
+    "effective": "自2025年2月10日起施行",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2024/art_6580c00811be45bfa304c1273b74e294.html",
+    "topics": [
+      "公司登记",
+      "营业执照",
+      "法定代表人",
+      "注册资本",
+      "股东出资",
+      "虚假登记"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "用于新公司法实施后的营业执照、法定代表人签署、出资期限和异常资本研判、另册管理及虚假登记责任；与公司法、登记条例及2026年提交材料规范并读。"
+  },
+  {
+    "id": "CA71",
+    "title": "经营主体登记文书规范（2026年版）",
+    "authority": "国家市场监督管理总局",
+    "type": "行政规范性文件及统一文书",
+    "effective": "自2026年5月1日起使用",
+    "url": "https://www.samr.gov.cn/cms_files/filemanager/1647978232/attach/20261/98f502029afc49039b5256d19692fa12.pdf",
+    "topics": [
+      "公司登记",
+      "法院裁判",
+      "撤销登记",
+      "补领证照",
+      "实名确认",
+      "登记文书"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "含公司变更申请、依照公司法第二十八条和生效裁判撤销登记（备案）申请、增减补换发证照、实名登记确认及审核通知文书；属办理规范和证据清单，不替代实体裁判依据。"
+  },
+  {
+    "id": "CA72",
+    "title": "经营主体登记提交材料规范（2026年版）",
+    "authority": "国家市场监督管理总局",
+    "type": "行政规范性文件及提交材料清单",
+    "effective": "自2026年5月1日起使用",
+    "url": "https://www.samr.gov.cn/cms_files/filemanager/1647978232/attach/20261/b16a7109d54e4cf6aff0a2b893ef6fc7.pdf",
+    "topics": [
+      "登记材料",
+      "公司变更",
+      "法定代表人",
+      "董事监事",
+      "公司决议",
+      "营业执照"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "用于核对当前登记业务的提交材料和签署要求；具体事项须结合公司法、登记条例、实施细则、公司登记管理实施办法和申请时登记机关公开清单，不能从材料受理反推决议实体有效。"
+  },
+  {
+    "id": "CA73",
+    "title": "最高人民法院关于适用〈中华人民共和国民法典〉物权编的解释（一）",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "自2021年1月1日起施行",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282101.html",
+    "topics": [
+      "物权",
+      "不动产登记",
+      "预告登记",
+      "共有份额",
+      "优先购买权",
+      "善意取得"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "用于区分登记与真实权利、裁判物权变动、共有份额优先购买及善意取得；登记记载或占有均须结合具体条文和证据审查。"
+  },
+  {
+    "id": "CA74",
+    "title": "最高人民法院关于审理预付式消费民事纠纷案件适用法律若干问题的解释",
+    "authority": "最高人民法院",
+    "type": "司法解释",
+    "effective": "自2025年5月1日起施行",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/459321.html",
+    "topics": [
+      "预付式消费",
+      "责任主体",
+      "格式条款",
+      "解除退款",
+      "职业闭店",
+      "惩罚性赔偿",
+      "证据控制"
+    ],
+    "status": "official_text_verified",
+    "usageNote": "用于识别许可他人使用执照、商场出租者过错、霸王条款、七日退款、解除后余额和利息、卷款跑路欺诈及经营者控制证据；须核适用范围和多用途预付卡等排除情形。"
+  }
+]
