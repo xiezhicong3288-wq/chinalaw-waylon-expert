@@ -655,6 +655,19 @@ class RetrievalTests(unittest.TestCase):
                 self.assertIn(item["status"], {"official_source_located", "official_text_verified"})
                 self.assertTrue(item["usageNote"])
 
+    def test_construction_rules_preserve_settlement_and_version_boundaries(self):
+        first = "construction-contract-interpretation-1"
+        self.assertIn("按照约定处理", self.get_article(first, 21))
+        self.assertIn("一方当事人申请对工程造价进行鉴定", self.get_article(first, 29))
+        self.assertIn("十八个月", self.get_article(first, 41))
+        second = "construction-contract-interpretation-2"
+        self.assertIn("没有合同关系的发包人", self.get_article(second, 6))
+        self.assertIn("代位权", self.get_article(second, 7))
+        self.assertIn("新受理的一审", self.get_article(second, 23))
+        self.assertEqual(choose_laws("建工解释一", self.catalog), {first})
+        entry = next(x for x in load_authority_registry() if x["id"] == "CA75")
+        self.assertIn("第六、七条", entry["usageNote"])
+
     def test_certificate_return_preservation_case_keeps_current_official_entry_and_limits(self):
         registry = load_authority_registry()
         item = next(entry for entry in registry if entry["id"] == "CA15")

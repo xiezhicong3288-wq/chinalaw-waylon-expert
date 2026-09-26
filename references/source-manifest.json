@@ -391,5 +391,13 @@
     "organization": "最高人民法院",
     "sha256": "30da32112299acf06e911511669552de5056e341775c074bfbf24530c3230fe3",
     "downloadedAt": "2026-09-26"
+  },
+  {
+    "law": "最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（一）",
+    "file": "construction-contract-interpretation-1.html",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/282111.html",
+    "organization": "最高人民法院",
+    "sha256": "5ae1726e6d67a28dbf1e49325b9a976a6afc9bcf8132e877adcd044273e73903",
+    "downloadedAt": "2026-09-26"
   }
 ]

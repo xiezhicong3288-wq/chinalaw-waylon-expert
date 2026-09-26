@@ -51,6 +51,7 @@ def main() -> None:
         "中华人民共和国涉外民事关系法律适用法", "中华人民共和国电子签名法",
         "最高人民法院关于民事诉讼证据的若干规定",
         "最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（二）",
+        "最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（一）",
         "最高人民法院关于适用〈中华人民共和国民法典〉合同编通则若干问题的解释",
         "最高人民法院关于适用〈中华人民共和国民法典〉有关担保制度的解释",
         "最高人民法院关于适用〈中华人民共和国公司法〉若干问题的规定（二）",
@@ -372,7 +373,7 @@ def main() -> None:
     assert "扫一扫在手机打开当前页" not in anti_monopoly and "网站标识码" not in anti_monopoly
 
     document_counts = Counter(item.get("documentType", "法律") for item in catalog)
-    assert document_counts == {"法律": 23, "司法解释": 47, "行政法规": 1, "部门规章": 2}
+    assert document_counts == {"法律": 23, "司法解释": 48, "行政法规": 1, "部门规章": 2}
     print(f"知识库结构校验通过：{document_counts['法律']}部法律、{document_counts['司法解释']}部司法解释、{document_counts['行政法规']}部行政法规、{document_counts['部门规章']}部部门规章，{len(index):,}条完整可提取记录，{len(cases)}个案例卡、{len(archetypes)}类案件原型、{len(failure_numbers)}类失败模式、{len(practice_files)}份通用办案工作流、{len(commercial_files)}份商事工作流、{len(patterns)}类商事决策模式、{len(authorities)}项商事权威法源；不代表法律适用正确性认证。")
 
 
