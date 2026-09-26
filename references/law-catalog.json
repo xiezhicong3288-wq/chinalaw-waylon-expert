@@ -1296,5 +1296,22 @@
     "files": [
       "references/司法解释/最高人民法院关于审理预付式消费民事纠纷案件适用法律若干问题的解释.md"
     ]
+  },
+  {
+    "name": "最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（一）",
+    "slug": "construction-contract-interpretation-1",
+    "documentType": "司法解释",
+    "aliases": [
+      "建设工程解释一",
+      "建工解释一",
+      "建设工程施工合同解释一"
+    ],
+    "articleCount": 45,
+    "baseArticleMax": 45,
+    "version": "法释〔2020〕25号",
+    "effective": "自2021年1月1日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（一）.md"
+    ]
   }
 ]
