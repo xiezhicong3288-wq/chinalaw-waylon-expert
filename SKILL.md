@@ -19,7 +19,7 @@ description: 中国法律检索与案件分析，覆盖民商事、公司、劳�
 - 赔偿计算、请求竞合、和解及实际执行：读取 [救济组合与金额](references/workflows/remedies-and-amounts.md)，逐项区分本金、增加赔偿、实际损失与已受偿。
 - 用户要求“按律师办案”“全案策略”“庭审准备”“和解执行”或“复盘上诉”：先读取 [办案实务入口](references/practice/README.md)，再按阶段加载对应实务文件。
 - 买卖、回款、股权、公司治理、担保、融资、供应链、票据、保险、证券、破产、商事仲裁或涉外交易：先用 [商事争议全景分流](references/commercial/commercial-disputes-map.md) 定位法律关系，再读取 [商事案件入口](references/commercial/README.md)、[商事权威来源登记册](references/commercial/authority-registry.json)和 [商事决策模式](references/commercial/decision-patterns.json)，按实际争点建立相关台账，不强制生成无关图表。
-- 印章证照返还、股东会决议、代持投票、董监高任免或控制权争夺：优先读取 [控制权专项入口](references/commercial/control-disputes.md)，按争点分流；纯治理纠纷只建立相关图表。涉及补换照、虚假登记、裁判后撤销登记、涤除或行政救济时读取 [公司登记、证照与裁判衔接](references/commercial/registration-remedies.md)；已立案、已办理登记变更时再追加 [两案协同与登记救济](references/commercial/linked-proceedings.md)。
+- 印章证照返还、股东会决议、代持投票、董监高任免或控制权争夺：优先读取 [控制权专项入口](references/commercial/control-disputes.md)，按争点分流；纯治理纠纷只建立相关图表。涉及虚假遗失声明、伪造印章或公安处理时追加 [证照与公安分流](references/commercial/seals-litigation.md) 中的版本、构成、证据与受案救济核查。涉及补换照、虚假登记、裁判后撤销登记、涤除或行政救济时读取 [公司登记、证照与裁判衔接](references/commercial/registration-remedies.md)；已立案、已办理登记变更时再追加 [两案协同与登记救济](references/commercial/linked-proceedings.md)。
 - 期限、送达、上诉、复议、仲裁或执行：同时读取 [程序期限核验](references/workflows/deadline-check.md) 及对应程序法。
 - 事实跨年份、新旧法衔接或有效性存疑：读取 [版本核验](references/workflows/version-check.md)。
 - 类案研究或用户询问“经验”：读取 [案例检索](references/workflows/case-research.md)、[案例目录](references/cases/catalog.json) 和 [案例经验库](references/experience/README.md)，按争点选择案例卡并做反事实比较。
