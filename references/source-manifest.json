@@ -399,5 +399,13 @@
     "organization": "最高人民法院",
     "sha256": "5ae1726e6d67a28dbf1e49325b9a976a6afc9bcf8132e877adcd044273e73903",
     "downloadedAt": "2026-09-26"
+  },
+  {
+    "law": "市场监督管理行政处罚程序规定",
+    "file": "market-supervision-administrative-penalty-procedure-2022.html",
+    "url": "https://www.gov.cn/zhengce/2022-10/08/content_5723507.htm",
+    "organization": "中国政府网（转载国家市场监督管理总局2022年修正全文）",
+    "sha256": "a583517d162955d4c07d413293ca7ae89dd5ce27f8a5da783e82d3ee6a45dcf8",
+    "downloadedAt": "2026-09-28"
   }
 ]

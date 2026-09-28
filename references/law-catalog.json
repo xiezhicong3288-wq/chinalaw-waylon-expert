@@ -1313,5 +1313,23 @@
     "files": [
       "references/司法解释/最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（一）.md"
     ]
+  },
+  {
+    "name": "市场监督管理行政处罚程序规定",
+    "slug": "market-supervision-administrative-penalty-procedure",
+    "documentType": "部门规章",
+    "aliases": [
+      "市场监管行政处罚程序规定",
+      "市场监管处罚程序规定",
+      "市场监督管理处罚程序规定",
+      "市场监管处罚程序"
+    ],
+    "articleCount": 87,
+    "baseArticleMax": 87,
+    "version": "国家市场监督管理总局令第2号公布，根据第42号令、第61号令两次修正",
+    "effective": "2022年第二次修改决定自2022年11月1日起施行",
+    "files": [
+      "references/部门规章/市场监督管理行政处罚程序规定.md"
+    ]
   }
 ]
