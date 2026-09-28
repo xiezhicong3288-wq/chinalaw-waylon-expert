@@ -1,8 +1,10 @@
 # S29—S34 第五阶段商事案件独立前向答复
 
+> 公开副本已将执行环境路径替换为占位符；历史测试结论不变，示例路径不是原始执行路径。
+
 日期：2026-09-25。具体模型标识：未知。全程离线；只读取当前Skill、本阶段场景和必要的本地资料，不读取评分标准、tests或既有evals/reports，不评分。除本报告外，仅按任务要求在系统临时目录创建商事空白工作台，审计后已删除。未填写真实或虚构个人信息，未修改其他持久文件。
 
-相对资料路径以 `C:/Users/waylo/Documents/Codex/2026-09-24/h10-mcp-ruimai-plugin-dev-6ab3d067664481918f06fcd6ecabf42e/outputs/chinalaw-waylon-expert/` 为根。下列法条均为本次读取的本地原文，不表示已在线核验现行效力或本案适用版本。
+相对资料路径以 `<SKILL_ROOT>/` 为根。下列法条均为本次读取的本地原文，不表示已在线核验现行效力或本案适用版本。
 
 ## S29：连续供货、六批否认收货及单据不对应
 
@@ -152,7 +154,7 @@
 
 ### 法律检索
 
-Python：`C:/Users/waylo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe`。工作目录为Skill根目录，先设`$env:PYTHONIOENCODING='utf-8'`。以下每个条号分别运行`python scripts/search_law.py --law <法律> --article <条号>`：
+Python：`python`。工作目录为Skill根目录，先设`$env:PYTHONIOENCODING='utf-8'`。以下每个条号分别运行`python scripts/search_law.py --law <法律> --article <条号>`：
 
 | 法律参数 | 实际条号 |
 |---|---|
@@ -163,11 +165,11 @@ Python：`C:/Users/waylo/.cache/codex-runtimes/codex-primary-runtime/dependencie
 
 ### S29商事工作台实际运行
 
-临时目录：`C:\Users\waylo\AppData\Local\Temp\chinalaw-phase5-978e90c9abf04341bbfc2fb2882e1043`，由系统临时根目录与专用随机名称组成，未传`--allow-git-repo`。
+临时目录：`<PRIVATE_WORKSPACE>`，由系统临时根目录与专用随机名称组成，未传`--allow-git-repo`。
 
 ```text
-python scripts/new_matter.py --profile commercial --output C:\Users\waylo\AppData\Local\Temp\chinalaw-phase5-978e90c9abf04341bbfc2fb2882e1043 --title S29商事空白工作台
-python scripts/audit_matter.py --input C:\Users\waylo\AppData\Local\Temp\chinalaw-phase5-978e90c9abf04341bbfc2fb2882e1043\matter.json
+python scripts/new_matter.py --profile commercial --output <PRIVATE_WORKSPACE> --title S29商事空白工作台
+python scripts/audit_matter.py --input <PRIVATE_WORKSPACE>/matter.json
 ```
 
 创建成功，生成`matter.md`、`matter.json`；JSON的`schemaVersion=2`、`commercialProfileVersion=1`，通用及商事数组均空，无隐私内容。审计没有结构错误，报告28项缺口，实际退出码1。

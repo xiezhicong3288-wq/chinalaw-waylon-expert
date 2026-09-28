@@ -1,8 +1,10 @@
 # S23—S28 第四阶段独立前向答复
 
+> 公开副本已将执行环境路径替换为占位符；历史测试结论不变，示例路径不是原始执行路径。
+
 日期：2026-09-25。具体模型标识：未知。全程离线；只读取本阶段场景、当前Skill和回答所需的本地资料。未读取rubric、tests、既有evals/reports或其他预期标准，不评分。除本报告外，只按任务要求创建了一个临时空白工作台，审计后已安全删除；没有修改其他持久文件。
 
-以下相对资料路径以 `C:/Users/waylo/Documents/Codex/2026-09-24/h10-mcp-ruimai-plugin-dev-6ab3d067664481918f06fcd6ecabf42e/outputs/chinalaw-waylon-expert/` 为根。法律引用来自本次已读取的本地正文，不表示已联网确认当前效力。实际合同、聊天截图、判决、送达材料和处罚决定均未提供。
+以下相对资料路径以 `<SKILL_ROOT>/` 为根。法律引用来自本次已读取的本地正文，不表示已联网确认当前效力。实际合同、聊天截图、判决、送达材料和处罚决定均未提供。
 
 ## S23：三天后开庭，否认收货并提出管辖异议
 
@@ -163,7 +165,7 @@ python scripts/audit_matter.py --input <本次临时目录>/matter.json
 
 ### 检索命令
 
-直接阅读使用PowerShell `Get-Content -LiteralPath ... -Raw`；JSON用`ConvertFrom-Json`和`Where-Object`筛选。Python使用 `C:/Users/waylo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe`，设置`$env:PYTHONIOENCODING='utf-8'`，工作目录为Skill根目录。
+直接阅读使用PowerShell `Get-Content -LiteralPath ... -Raw`；JSON用`ConvertFrom-Json`和`Where-Object`筛选。Python使用 `python`，设置`$env:PYTHONIOENCODING='utf-8'`，工作目录为Skill根目录。
 
 以下每个条号分别执行`python scripts/search_law.py --law <法律> --article <条号>`：
 
@@ -182,8 +184,8 @@ python scripts/audit_matter.py --input <本次临时目录>/matter.json
 创建命令：
 
 ```text
-python scripts/new_matter.py --output C:\Users\waylo\AppData\Local\Temp\chinalaw-phase4-b623f23f744640898523c15364980c8e --title S28离线空白工作台
-python scripts/audit_matter.py --input C:\Users\waylo\AppData\Local\Temp\chinalaw-phase4-b623f23f744640898523c15364980c8e\matter.json
+python scripts/new_matter.py --output <PRIVATE_WORKSPACE> --title S28离线空白工作台
+python scripts/audit_matter.py --input <PRIVATE_WORKSPACE>/matter.json
 ```
 
 创建成功生成`matter.md`和`matter.json`；未传`--allow-git-repo`。审计无结构错误、12项待补工作、实际退出码0。生成JSON的`schemaVersion`为2，`asOf`及`proceduralPosture`为null，各案件数组为空，创建日期2026-09-25。

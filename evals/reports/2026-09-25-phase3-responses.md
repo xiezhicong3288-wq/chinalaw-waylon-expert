@@ -1,8 +1,10 @@
 # S17—S22 第三阶段独立前向答复
 
+> 公开副本已将执行环境路径替换为占位符；历史测试结论不变，示例路径不是原始执行路径。
+
 日期：2026-09-25。具体模型标识：未知。条件：离线合成请求；没有真实合同、证据或案卷；未读取评分标准、tests、既有evals/reports或其他预期标准。仅新增本报告，不评分，不修改Skill资料。
 
-本报告相对来源路径以 `C:/Users/waylo/Documents/Codex/2026-09-24/h10-mcp-ruimai-plugin-dev-6ab3d067664481918f06fcd6ecabf42e/outputs/chinalaw-waylon-expert/` 为根。案例答复均为本次已读本地编辑卡的转述，不冒充裁判原文；卡中“2026-09-25核验”是资料既有记载，本次没有访问官方网页，也未核验当前指导效力。
+本报告相对来源路径以 `<SKILL_ROOT>/` 为根。案例答复均为本次已读本地编辑卡的转述，不冒充裁判原文；卡中“2026-09-25核验”是资料既有记载，本次没有访问官方网页，也未核验当前指导效力。
 
 ## S17：合作协议能否排除劳动关系
 
@@ -136,7 +138,7 @@
 
 直接阅读使用`Get-Content -LiteralPath ... -Raw`；文件头使用`Get-Content ... -TotalCount 12`。场景及法律目录筛选使用`ConvertFrom-Json`、`Where-Object`、`ConvertTo-Json`，场景输出仅S17—S22。
 
-运行前设置`$env:PYTHONIOENCODING='utf-8'`；使用Python：`C:/Users/waylo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe`。工作目录为Skill根目录。
+运行前设置`$env:PYTHONIOENCODING='utf-8'`；使用Python：`python`。工作目录为Skill根目录。
 
 ```text
 scripts/search_cases.py --id GC179

@@ -28,7 +28,7 @@ description: 中国法律条文检索与案件分析，适用于民商事纠纷�
 | 全案策略、庭审准备、和解执行、复盘上诉 | 案件方法中的深度办案模式，并按 [实务入口](references/practice/README.md) 选择当前阶段 |
 | 公司日常经营合规（年报、公示、合同、用工、税务、数据、安全等） | 先按经营行为、主体、行业和地区查 [法域路由](references/workflows/law-routing.md) 及 [通用入口](references/workflows/general-sources.md)；未收录的正式依据联网核验，不将某行业义务泛化到所有企业 |
 | 商事纠纷 | 争点不明时先看 [全景分流](references/commercial/commercial-disputes-map.md)，再按 [商事入口](references/commercial/README.md) 选择有关模块；用 `scripts/search_commercial_authorities.py` 筛选来源，[决策模式](references/commercial/decision-patterns.json) 仅阅读有关条目 |
-| 证照返还、决议、代持投票、任免或控制权 | 优先 [控制权专项](references/commercial/control-disputes.md)，按争点追加印章、登记及两案协同模块，无需通读全部商事材料 |
+| 证照返还、决议、代持投票、任免或控制权 | 优先 [控制权专项](references/commercial/control-disputes.md)，按争点追加印章、登记及关联案件协同模块，无需通读全部商事材料 |
 | 期限、送达、上诉、复议、仲裁或执行程序 | [期限核验](references/workflows/deadline-check.md) 及对应程序法 |
 | 跨年份、新旧法衔接或效力存疑 | [版本核验](references/workflows/version-check.md) |
 | 类案或案例经验 | [案例检索](references/workflows/case-research.md) 与 [经验入口](references/experience/README.md)，用 `scripts/search_cases.py` 定位有关案例卡 |

@@ -1,8 +1,10 @@
 # S11—S16 独立前向答复记录
 
+> 公开副本已将执行环境路径替换为占位符；历史测试结论不变，示例路径不是原始执行路径。
+
 测试日期：2026-09-25。具体模型标识：未知。执行方式：离线合成请求，自然答复，不评分。未读取 rubric、tests、既有 reports 或评估规程；未联网核验。唯一新增文件为本报告。没有真实案件材料，无法进行实际证据审查或专业法律复核。
 
-本报告中 `references/`、`scripts/` 路径均以 `C:/Users/waylo/Documents/Codex/2026-09-24/h10-mcp-ruimai-plugin-dev-6ab3d067664481918f06fcd6ecabf42e/outputs/chinalaw-waylon-expert/` 为根目录。以下“已读取”均指本次读取本地快照，不表示本次访问官方网页。
+本报告中 `references/`、`scripts/` 路径均以 `<SKILL_ROOT>/` 为根目录。以下“已读取”均指本次读取本地快照，不表示本次访问官方网页。
 
 ## S11：电子送达与上诉期限
 
@@ -142,7 +144,7 @@ E01为你所称截图，原文件、页码、形成时间、取得方式均待�
 
 使用 `Get-Content -LiteralPath ... -Raw` 读资料，`Get-Content ... -TotalCount 12`读法律头部；场景筛选使用 `ConvertFrom-Json`、`Where-Object`匹配S11—S16、`ConvertTo-Json -Depth 10`。
 
-检索程序：`C:/Users/waylo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe`，启动前设 `$env:PYTHONIOENCODING='utf-8'`；工作目录为Skill根目录。统一执行 `scripts/search_law.py`，实际参数如下（合并列示，不代表全部参数在一次调用中传入）：
+检索程序：`python`，启动前设 `$env:PYTHONIOENCODING='utf-8'`；工作目录为Skill根目录。统一执行 `scripts/search_law.py`，实际参数如下（合并列示，不代表全部参数在一次调用中传入）：
 
 | 法律 | 关键词检索（及limit） | 精确条号检索 |
 |---|---|---|
