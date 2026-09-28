@@ -32,6 +32,7 @@ description: 中国法律条文检索与案件分析，适用于民商事、公�
 ```text
 python scripts/search_law.py --law 民法典 --article 577
 python scripts/search_law.py --law 刑法 --article 133 --suffix 1
+python scripts/search_law.py --law 市场监管处罚程序 --article 18
 python scripts/search_law.py --law 民事证据规定 --keyword 电子数据 --limit 5
 python scripts/search_law.py --keyword 举证责任 --limit 10
 python scripts/search_commercial_authorities.py --keyword 公司法 --limit 5
