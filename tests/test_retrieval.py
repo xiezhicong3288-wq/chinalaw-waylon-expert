@@ -82,6 +82,14 @@ class RetrievalTests(unittest.TestCase):
     def test_exact_alias(self):
         self.assertEqual(choose_laws("消保法", self.catalog), {"consumer-rights-law"})
 
+    def test_market_supervision_penalty_procedure_is_retrievable(self):
+        slug = "market-supervision-administrative-penalty-procedure"
+        self.assertEqual(choose_laws("市场监管处罚程序", self.catalog), {slug})
+        self.assertIn("十五个工作日", self.get_article(slug, 18))
+        self.assertIn("九十日", self.get_article(slug, 64))
+        self.assertIn("经过三十日，即视为送达", self.get_article(slug, 82))
+        self.assertIn("2019年4月1日起施行", self.get_article(slug, 87))
+
     def test_invalid_queries_fail(self):
         for args in [("--law", "刑法", "--article", "0"),
                      ("--law", "刑法", "--article", "9999"),
