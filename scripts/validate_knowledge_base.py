@@ -98,6 +98,7 @@ def main() -> None:
         "中华人民共和国市场主体登记管理条例",
         "中华人民共和国市场主体登记管理条例实施细则",
         "公司登记管理实施办法",
+        "市场监督管理行政处罚程序规定",
         "最高人民法院关于适用〈中华人民共和国民法典〉物权编的解释（一）",
         "最高人民法院关于审理预付式消费民事纠纷案件适用法律若干问题的解释",
     }
@@ -359,6 +360,12 @@ def main() -> None:
     assert "审查数据电文作为证据的真实性" in esign
     assert "电子签名制作数据仅由电子签名人控制" in esign
 
+    market_penalty_procedure = (ROOT / "references" / "部门规章" / "市场监督管理行政处罚程序规定.md").read_text(encoding="utf-8")
+    assert "根据第42号令、第61号令两次修正" in market_penalty_procedure
+    assert "自发现线索或者收到材料之日起十五个工作日内予以核查" in market_penalty_procedure
+    assert "自立案之日起九十日内作出处理决定" in market_penalty_procedure
+    assert "自公告发布之日起经过三十日，即视为送达" in market_penalty_procedure
+
     constitution = (ROOT / "references" / "法律法规" / "中华人民共和国宪法.md").read_text(encoding="utf-8")
     assert "## 序言" in constitution and "**第一百四十三条**" in constitution
 
@@ -373,7 +380,7 @@ def main() -> None:
     assert "扫一扫在手机打开当前页" not in anti_monopoly and "网站标识码" not in anti_monopoly
 
     document_counts = Counter(item.get("documentType", "法律") for item in catalog)
-    assert document_counts == {"法律": 23, "司法解释": 48, "行政法规": 1, "部门规章": 2}
+    assert document_counts == {"法律": 23, "司法解释": 48, "行政法规": 1, "部门规章": 3}
     print(f"知识库结构校验通过：{document_counts['法律']}部法律、{document_counts['司法解释']}部司法解释、{document_counts['行政法规']}部行政法规、{document_counts['部门规章']}部部门规章，{len(index):,}条完整可提取记录，{len(cases)}个案例卡、{len(archetypes)}类案件原型、{len(failure_numbers)}类失败模式、{len(practice_files)}份通用办案工作流、{len(commercial_files)}份商事工作流、{len(patterns)}类商事决策模式、{len(authorities)}项商事权威法源；不代表法律适用正确性认证。")
 
 
