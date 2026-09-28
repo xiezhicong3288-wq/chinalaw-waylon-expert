@@ -1,6 +1,6 @@
 ---
 name: chinalaw-waylon-expert
-description: 中国法律条文检索与案件分析，适用于民商事、公司控制权、劳动、行政、刑事及家事纠纷；核验法源版本，分析请求、证据、程序期限和救济。
+description: 中国法律条文检索与案件分析，适用于民商事纠纷、公司经营合规与控制权、劳动、行政、刑事及家事争议；核验法源版本，分析请求、证据、程序期限和救济。
 ---
 
 # Waylon 中国法律案件工作台
@@ -18,6 +18,7 @@ description: 中国法律条文检索与案件分析，适用于民商事、公�
 | 具体纠纷、证据分析或诉讼策略 | [案件方法](references/workflows/case-method.md) 与 [案件及证据分析](references/workflows/case-analysis.md)；多项请求、举证争议或定性不清时追加 [请求权与证明责任](references/workflows/claims-and-proof.md) |
 | 赔偿、竞合、和解或执行金额 | [救济组合与金额](references/workflows/remedies-and-amounts.md) |
 | 全案策略、庭审准备、和解执行、复盘上诉 | 案件方法中的深度办案模式，并按 [实务入口](references/practice/README.md) 选择当前阶段 |
+| 公司日常经营合规（年报、公示、合同、用工、税务、数据、安全等） | 先按经营行为、主体、行业和地区查 [法域路由](references/workflows/law-routing.md) 及 [通用入口](references/workflows/general-sources.md)；未收录的正式依据联网核验，不将某行业义务泛化到所有企业 |
 | 商事纠纷 | 争点不明时先看 [全景分流](references/commercial/commercial-disputes-map.md)，再按 [商事入口](references/commercial/README.md) 选择有关模块；用 `scripts/search_commercial_authorities.py` 筛选来源，[决策模式](references/commercial/decision-patterns.json) 仅阅读有关条目 |
 | 证照返还、决议、代持投票、任免或控制权 | 优先 [控制权专项](references/commercial/control-disputes.md)，按争点追加印章、登记及两案协同模块，无需通读全部商事材料 |
 | 期限、送达、上诉、复议、仲裁或执行程序 | [期限核验](references/workflows/deadline-check.md) 及对应程序法 |
