@@ -6,8 +6,12 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sqlite3
+import sys
 from functools import lru_cache
 from pathlib import Path
+
+from law_search_cache import candidates as cached_candidates, open_cache, searchable
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -75,6 +79,25 @@ def article_text(relative_file: str, article_cn: str) -> str:
     return file_articles(relative_file).get(article_cn, "")
 
 
+def query_candidates(law_slugs: set[str], article=None, suffix=None, needles=(),
+                     use_cache=True, rebuild=False, all_laws=False) -> list[dict]:
+    if use_cache:
+        connection = None
+        try:
+            connection = open_cache(ROOT, lambda: load_json("law-index.json"), file_articles,
+                                    rebuild, check_sources=bool(needles))
+            return cached_candidates(connection, law_slugs, article, suffix, needles, all_laws)
+        except (OSError, sqlite3.Error, ValueError, KeyError, TypeError) as error:
+            print(f"检索缓存不可用，改用原文检索：{error}", file=sys.stderr)
+        finally:
+            if connection is not None:
+                connection.close()
+    items = [item for item in load_json("law-index.json") if item["lawSlug"] in law_slugs]
+    if article is not None:
+        items = [item for item in items if item["article"] == article and item.get("articleSuffix") == suffix]
+    return items
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="检索本地中国法律知识库")
     parser.add_argument("--law", help="法律名称、简称或 slug")
@@ -82,6 +105,9 @@ def main() -> None:
     parser.add_argument("--suffix", type=int, help="增补条款序号，如之一传 1")
     parser.add_argument("--keyword", help="在条文原文中检索关键词")
     parser.add_argument("--limit", type=int, default=20, help="关键词结果上限，默认20")
+    cache_group = parser.add_mutually_exclusive_group()
+    cache_group.add_argument("--no-cache", action="store_true", help="跳过本地缓存，直接检索JSON和原文")
+    cache_group.add_argument("--rebuild-cache", action="store_true", help="重新构建本地缓存后查询")
     args = parser.parse_args()
     if args.article is None and not args.keyword:
         parser.error("必须提供 --article 或 --keyword")
@@ -95,17 +121,15 @@ def main() -> None:
         parser.error("结果上限须为正整数，关键词不能为空")
 
     catalog = load_json("law-catalog.json")
-    index = load_json("law-index.json")
     law_slugs = choose_laws(args.law, catalog)
     if args.article is not None and len(law_slugs) != 1:
         parser.error("法律名称有歧义，请明确具体法律：" + "、".join(sorted(law_slugs)))
-    candidates = [item for item in index if item["lawSlug"] in law_slugs]
+    original_needle = args.keyword.strip().casefold() if args.keyword else ""
+    needles = tuple(value.casefold() for value in KEYWORD_ALIASES.get(original_needle, (original_needle,))) if args.keyword else ()
+    candidates = query_candidates(law_slugs, args.article, args.suffix, needles,
+                                  not args.no_cache, args.rebuild_cache, not args.law)
 
     if args.article is not None:
-        candidates = [
-            item for item in candidates
-            if item["article"] == args.article and item.get("articleSuffix") == args.suffix
-        ]
         if not candidates:
             raise SystemExit("未找到对应法律和条号")
         for item in candidates:
@@ -121,20 +145,13 @@ def main() -> None:
             print()
         return
 
-    original_needle = args.keyword.strip().casefold()
-    needles = tuple(value.casefold() for value in KEYWORD_ALIASES.get(original_needle, (original_needle,)))
     if len(needles) > 1:
         print(f"检索扩展：{args.keyword.strip()} → {'、'.join(KEYWORD_ALIASES[original_needle])}")
         print()
     found = 0
     for item in candidates:
         body = article_text(item["file"], item["articleCn"])
-        haystack = " ".join(
-            str(value or "") for value in (
-                item["law"], item["articleCn"], item.get("part"), item.get("chapter"),
-                item.get("section"), item.get("topic"), body,
-            )
-        ).casefold()
+        haystack = searchable(item, body)
         matched = next((needle for needle in needles if needle in haystack), None)
         if matched is None:
             continue

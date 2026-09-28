@@ -2,6 +2,21 @@
 
 面向 Codex 等本地 Skill 运行环境的中国法律检索与案件分析工具。它把法律原文、程序期限、证据矩阵、双方论证和版本核验放进同一工作流，并明确材料不足时的结论边界。
 
+## 按需加载与检索性能
+
+`SKILL.md` 只保留任务分流和共同核验要求；法域细节、全案方法与维护清单按任务读取。查条文可直接运行检索脚本，无需把整份目录或统一索引读入对话。
+
+检索自动复用本地 SQLite 缓存，使用内容指纹检测资料变化；命中条文仍从 Markdown 原文读取。缓存首次构建有额外成本，后续查询复用；不可用时自动回退原始检索。缓存不提交、不打包，也不代表已经核验法律当前效力。
+
+```text
+python scripts/search_law.py --law 民法典 --article 577
+python scripts/search_law.py --keyword 电子送达 --limit 5
+python scripts/search_law.py --law 民法典 --article 577 --no-cache
+python scripts/benchmark_search.py --runs 7
+```
+
+缓存失效、短关键词兼容性及测量边界见 [检索性能与维护](references/workflows/search-performance.md)。
+
 ## 当前知识库
 
 | 类别 | 权威文件 | 索引记录 |
