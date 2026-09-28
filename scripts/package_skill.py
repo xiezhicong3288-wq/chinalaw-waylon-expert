@@ -42,6 +42,7 @@ def source_files(source: Path) -> list[Path]:
         path for path in sorted(source.rglob("*"))
         if path.is_file() and ".git" not in path.relative_to(source).parts
         and "__pycache__" not in path.relative_to(source).parts
+        and ".cache" not in path.relative_to(source).parts
     ]
 
 
