@@ -1,6 +1,7 @@
 ---
 name: chinalaw-waylon-expert
-description: 中国法律条文检索与案件分析，适用于民商事纠纷、公司经营合规与控制权、劳动、行政、刑事及家事争议；核验法源版本，分析请求、证据、程序期限和救济。
+description: Retrieve and analyze Chinese law for civil, commercial, corporate, labor, administrative, criminal, family, and China-US cross-border disputes. Use when a matter requires verified legal sources, claims and defenses, evidence, procedural deadlines, remedies, or enforcement analysis.
+description_zh: 中国法律条文检索与案件分析，适用于民商事、公司治理、劳动、行政、刑事、家事及中美跨境争议；核验法源版本，分析请求、抗辩、证据、程序期限、救济与执行。
 ---
 
 # Waylon 中国法律案件工作台
