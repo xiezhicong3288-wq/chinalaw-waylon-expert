@@ -1,6 +1,6 @@
 ---
 name: chinalaw-waylon-expert
-description: Retrieve and analyze Chinese law for civil, commercial, corporate, labor, administrative, criminal, family, and China-US cross-border disputes. Use when a matter requires verified legal sources, claims and defenses, evidence, procedural deadlines, remedies, or enforcement analysis.
+description: Retrieve and analyze Chinese law. Use for legal research, evidence, deadlines, remedies, and case strategy.
 ---
 
 # Waylon 中国法律案件工作台
