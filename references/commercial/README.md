@@ -9,6 +9,7 @@
 5. [损失、价款与会计材料](damages-accounting.md)：本金、利息、违约金、损失、抵销和账务证据。
 6. [保全、执行与困境企业](preservation-insolvency.md)：财产线索、保全成本、执行顺位和破产风险。
 7. [商事仲裁与涉外交易](arbitration-crossborder.md)：仲裁协议、机构规则、法律适用、送达和跨境实现。
+   中美销售合同的实体争议另查[跨境电商美国目的地分流](../operations/cross-border-ecommerce.md)，先识别企业间货物买卖与消费者订单，再处理《销售公约》、州法和平台合同的适用边界。
 8. [商事争议全景分流](commercial-disputes-map.md)：覆盖合同、融资、担保、公司、金融、票据、保险、竞争、破产和涉外商事的统一分流。
 9. [公司诉讼全景图](company-litigation-map.md)：决议、出资、股权、知情权、代表诉讼、责任、退出、登记和对外交易。
 10. [商事权威来源登记册](authority-registry.json)：记录官方来源、效力层级、核验状态、专题标签和使用边界。
