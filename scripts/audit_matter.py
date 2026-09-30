@@ -12,6 +12,7 @@ import re
 from pathlib import Path
 
 from audit_reasoning import audit_reasoning
+from audit_verification import audit_verification
 
 
 REQUIRED_FIELDS = {
@@ -188,6 +189,9 @@ def audit(data: dict) -> tuple[list[str], list[str]]:
     reasoning_errors, reasoning_gaps = audit_reasoning(data)
     errors.extend(reasoning_errors)
     gaps.extend(reasoning_gaps)
+    verification_errors, verification_gaps = audit_verification(data['authorities'])
+    errors.extend(verification_errors)
+    gaps.extend(verification_gaps)
     return errors, gaps
 
 

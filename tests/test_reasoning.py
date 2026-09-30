@@ -27,6 +27,13 @@ class ReasoningAuditTests(unittest.TestCase):
     def test_valid_graph(self):
         self.assertEqual(audit_reasoning(fixture()), ([], []))
 
+    def test_supported_with_unchecked_burden_is_gap(self):
+        data = fixture()
+        data['reasoning'][0]['conclusionStatus'] = 'supported'
+        errors, gaps = audit_reasoning(data)
+        self.assertFalse(errors)
+        self.assertTrue(gaps)
+
     def test_workspace_audit_reports_dangling_reasoning(self):
         with tempfile.TemporaryDirectory() as directory:
             create_workspace(Path(directory), "合成关联测试", allow_git_repo=True)
