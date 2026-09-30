@@ -113,6 +113,10 @@ class SearchCacheTests(unittest.TestCase):
         sys.path.insert(0, str(ROOT / 'scripts'))
         from package_skill import source_files
         self.assert_same('--keyword', '印章')
+        (self.root / 'SKILL.md').write_text('Synthetic cache fixture', encoding='utf-8')
+        names = ['SKILL.md', 'release-files.json', 'scripts/search_law.py', 'scripts/law_search_cache.py',
+                 'references/law-catalog.json', 'references/law-index.json', 'references/测试法.md']
+        (self.root / 'release-files.json').write_text(json.dumps({'files': names}), encoding='utf-8')
         files = source_files(self.root)
         self.assertTrue(files)
         self.assertFalse(any('.cache' in path.parts for path in files))

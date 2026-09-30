@@ -61,6 +61,8 @@ def audit_reasoning(data: dict) -> tuple[list[str], list[str]]:
         if isinstance(issue, str) and targets["issues"][issue] != 1:
             errors.append(f"{label}.issueId引用{issue}无法唯一定位")
         if row.get("conclusionStatus") == "supported" and row.get("kind") in ("fact", "mixed"):
+            if any(str(row.get(key, '')).strip().lower() in {'待核', '待确认', 'unknown', 'pending', 'tbd'} for key in ('burdenOn', 'standard')):
+                gaps.append(f"{label}标为supported但举证责任或证明标准尚待核；应补核或降低结论状态")
             if not row.get("factIds") or not row.get("evidenceIds"):
                 gaps.append(f"{label}事实性结论标为supported但事实或证据关联为空")
         if row.get("kind") in ("law", "mixed") and not row.get("authorityIds"):

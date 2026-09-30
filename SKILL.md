@@ -25,7 +25,7 @@ description: Retrieve and analyze Chinese law. Use for legal research, evidence,
 |---|---|
 | 已知法律、条号或关键词 | 直接运行下方条文检索命令，核对返回的原文、版本和路径 |
 | 法律关系或特别法不明确 | 按争点查 [法域路由](references/workflows/law-routing.md) 的相关段落；劳动、行政、家事、消费者及跨案型问题另查 [案型分流](references/workflows/domain-playbooks.md)，缺失法源用 [通用入口](references/workflows/general-sources.md) 补查 |
-| 具体纠纷、证据分析或诉讼策略 | [案件方法](references/workflows/case-method.md) 与 [案件及证据分析](references/workflows/case-analysis.md)；多项请求、举证争议或定性不清时追加 [请求权与证明责任](references/workflows/claims-and-proof.md) |
+| 具体纠纷、证据分析或诉讼策略 | 先读 [案件方法](references/workflows/case-method.md)；证据争议时追加 [证据审查表](references/workflows/case-analysis.md)，多项请求、举证争议或定性不清时追加 [请求权与证明责任](references/workflows/claims-and-proof.md) |
 | 赔偿、竞合、和解或执行金额 | [救济组合与金额](references/workflows/remedies-and-amounts.md) |
 | 全案策略、庭审准备、和解执行、复盘上诉 | 案件方法中的深度办案模式，并按 [实务入口](references/practice/README.md) 选择当前阶段 |
 | 公司日常经营合规（年报、公示、合同、用工、税务、数据、安全等） | 先按经营行为、主体、行业和地区查 [法域路由](references/workflows/law-routing.md) 及 [通用入口](references/workflows/general-sources.md)；未收录的正式依据联网核验，不将某行业义务泛化到所有企业 |
@@ -39,15 +39,15 @@ description: Retrieve and analyze Chinese law. Use for legal research, evidence,
 
 ## 条文检索
 
-在本 Skill 目录运行；有法律名称时优先限定范围：
+在本 Skill 目录运行；有法律名称时优先限定范围。Windows PowerShell 优先使用下列入口自动查找现有解释器；其他环境用已有 Python 3.12+ 运行同名脚本，见 [运行入口](references/workflows/runtime.md)。解释器不可用时只读检索原文并报告限制，不重复尝试失败命令。
 
 ```text
-python scripts/search_law.py --law 民法典 --article 577
-python scripts/search_law.py --law 刑法 --article 133 --suffix 1
-python scripts/search_law.py --law 市场监管处罚程序 --article 18
-python scripts/search_law.py --law 民事证据规定 --keyword 电子数据 --limit 5
-python scripts/search_law.py --keyword 举证责任 --limit 10
-python scripts/search_commercial_authorities.py --keyword 公司法 --limit 5
+./scripts/run.ps1 search_law.py --law 民法典 --article 577
+./scripts/run.ps1 search_law.py --law 刑法 --article 133 --suffix 1
+./scripts/run.ps1 search_law.py --law 市场监管处罚程序 --article 18
+./scripts/run.ps1 search_law.py --law 民事证据规定 --keyword 电子数据 --limit 5
+./scripts/run.ps1 search_law.py --keyword 举证责任 --limit 10
+./scripts/run.ps1 search_commercial_authorities.py --keyword 公司法 --limit 5
 ```
 
 脚本用 [法律目录](references/law-catalog.json) 识别名称、别名与版本，以 [统一索引](references/law-index.json) 定位 Markdown 原文。首查自动创建可重建的本地缓存，资料变更后自动失效；缓存不可用时回退原始检索。用 `--no-cache` 跳过缓存，或 `--rebuild-cache` 强制重建。检索维护说明见 [检索性能](references/workflows/search-performance.md)。

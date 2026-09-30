@@ -4,13 +4,16 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import os
+import stat
 import struct
 import tempfile
 import zipfile
 import zlib
 from datetime import datetime
 from pathlib import Path, PurePosixPath
+from release_guard import check
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,12 +41,10 @@ def extra_fields(extra: bytes):
 
 
 def source_files(source: Path) -> list[Path]:
-    return [
-        path for path in sorted(source.rglob("*"))
-        if path.is_file() and ".git" not in path.relative_to(source).parts
-        and "__pycache__" not in path.relative_to(source).parts
-        and ".cache" not in path.relative_to(source).parts
-    ]
+    try:
+        return [p for _, p in sorted(check(source).items())]
+    except (ValueError, OSError) as exc:
+        raise SystemExit(str(exc)) from exc
 
 
 def build_package(source: Path, destination: Path) -> None:
@@ -51,9 +52,22 @@ def build_package(source: Path, destination: Path) -> None:
     destination = destination.resolve()
     if source in destination.parents:
         raise SystemExit("输出ZIP不能位于待打包Skill目录内")
+    files = source_files(source)  # Validate before creating or replacing any output.
     destination.parent.mkdir(parents=True, exist_ok=True)
+    handle, temporary = tempfile.mkstemp(prefix='.package-', suffix='.zip', dir=destination.parent)
+    os.close(handle)
+    staged = Path(temporary)
+    try:
+        _write_package(source, staged, files)
+        verify_package(source, staged)
+        os.replace(staged, destination)
+    finally:
+        staged.unlink(missing_ok=True)
+
+
+def _write_package(source: Path, destination: Path, files: list[Path]) -> None:
     with zipfile.ZipFile(destination, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
-        for path in source_files(source):
+        for path in files:
             relative = PurePosixPath(source.name, *path.relative_to(source).parts).as_posix()
             modified = datetime.fromtimestamp(path.stat().st_mtime)
             info = zipfile.ZipInfo(relative, date_time=modified.timetuple()[:6])
@@ -65,14 +79,11 @@ def build_package(source: Path, destination: Path) -> None:
                 # extra field is redundant metadata for extractors that mishandle it.
                 info.extra = unicode_path_extra(relative)
             archive.writestr(info, path.read_bytes(), compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
-    verify_package(source, destination)
 
 
 def verify_package(source: Path, destination: Path) -> None:
-    expected = {
-        PurePosixPath(source.name, *path.relative_to(source).parts).as_posix()
-        for path in source_files(source)
-    }
+    sources = {PurePosixPath(source.name, *p.relative_to(source).parts).as_posix(): p for p in source_files(source)}
+    expected = set(sources)
     with zipfile.ZipFile(destination) as archive:
         infos = archive.infolist()
         actual = {info.filename for info in infos}
@@ -83,6 +94,10 @@ def verify_package(source: Path, destination: Path) -> None:
             unexpected = sorted(actual - expected)
             raise SystemExit(f"ZIP路径不一致；缺少={missing[:3]}，多出={unexpected[:3]}")
         for info in infos:
+            if stat.S_IFMT(info.external_attr >> 16) != stat.S_IFREG:
+                raise SystemExit(f"ZIP条目不是普通文件：{info.filename}")
+            if hashlib.sha256(archive.read(info)).digest() != hashlib.sha256(sources[info.filename].read_bytes()).digest():
+                raise SystemExit(f"ZIP正文与已审查源文件不一致：{info.filename}")
             if info.create_system != 3:
                 raise SystemExit(f"ZIP条目未使用跨平台Unix主机标识：{info.filename}")
             if not info.filename.isascii():
