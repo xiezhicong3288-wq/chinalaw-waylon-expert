@@ -390,6 +390,14 @@
     "url": "https://www.gov.cn/zhengce/2022-10/08/content_5723507.htm",
     "organization": "中国政府网（转载国家市场监督管理总局2022年修正全文）",
     "sha256": "a583517d162955d4c07d413293ca7ae89dd5ce27f8a5da783e82d3ee6a45dcf8",
-    "downloadedAt": "2026-09-28"
+      "downloadedAt": "2026-09-28"
+  },
+  {
+    "law": "最高人民法院关于审理涉及刑事犯罪的民事纠纷案件若干问题的规定",
+    "file": "civil-criminal-cross-interpretation.html",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/512441.html",
+    "organization": "最高人民法院（公布司法解释正式全文）",
+    "sha256": "08f2c705eb7b47c57f29a318a9e42093078d8986ec61d81869beb67f7c5f8dfd",
+    "downloadedAt": "2026-10-28"
   }
 ]

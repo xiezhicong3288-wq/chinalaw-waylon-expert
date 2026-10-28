@@ -100,6 +100,7 @@ def main() -> None:
         "公司登记管理实施办法",
         "市场监督管理行政处罚程序规定",
         "最高人民法院关于适用〈中华人民共和国民法典〉物权编的解释（一）",
+        "最高人民法院关于审理涉及刑事犯罪的民事纠纷案件若干问题的规定",
     }
     assert {item["name"] for item in catalog} == required, "authority catalog is incomplete or unexpected"
     expected_records = sum(item["articleCount"] for item in catalog)
@@ -379,7 +380,7 @@ def main() -> None:
     assert "扫一扫在手机打开当前页" not in anti_monopoly and "网站标识码" not in anti_monopoly
 
     document_counts = Counter(item.get("documentType", "法律") for item in catalog)
-    assert document_counts == {"法律": 22, "司法解释": 47, "行政法规": 1, "部门规章": 3}
+    assert document_counts == {"法律": 22, "司法解释": 48, "行政法规": 1, "部门规章": 3}
     print(f"知识库结构校验通过：{document_counts['法律']}部法律、{document_counts['司法解释']}部司法解释、{document_counts['行政法规']}部行政法规、{document_counts['部门规章']}部部门规章，{len(index):,}条完整可提取记录，{len(cases)}个案例卡、{len(archetypes)}类案件原型、{len(failure_numbers)}类失败模式、{len(practice_files)}份通用办案工作流、{len(commercial_files)}份商事工作流、{len(patterns)}类商事决策模式、{len(authorities)}项商事权威法源；不代表法律适用正确性认证。")
 
 

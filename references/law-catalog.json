@@ -1293,5 +1293,25 @@
     "files": [
       "references/部门规章/市场监督管理行政处罚程序规定.md"
     ]
+  },
+  {
+    "name": "最高人民法院关于审理涉及刑事犯罪的民事纠纷案件若干问题的规定",
+    "slug": "civil-criminal-cross-interpretation",
+    "documentType": "司法解释",
+    "aliases": [
+      "民刑交叉司法解释",
+      "民刑交叉规定",
+      "涉及刑事犯罪的民事纠纷",
+      "刑民交叉",
+      "先刑后民",
+      "民刑并行"
+    ],
+    "articleCount": 24,
+    "baseArticleMax": 24,
+    "version": "法释〔2026〕19号",
+    "effective": "2026年9月22日起施行",
+    "files": [
+      "references/司法解释/最高人民法院关于审理涉及刑事犯罪的民事纠纷案件若干问题的规定.md"
+    ]
   }
 ]
