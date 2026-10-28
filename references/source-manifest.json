@@ -73,14 +73,6 @@
     "downloadedAt": "2026-09-24"
   },
   {
-    "law": "中华人民共和国社会保险法",
-    "file": "social-insurance.html",
-    "url": "https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/201901/t20190117_780532.html",
-    "organization": "北京市人民政府（转载全国人大常委会现行文本）",
-    "sha256": "2b3c56cd023225108ec948f3b308e073819a11fa69e67b25d85b488fe7884f91",
-    "downloadedAt": "2026-09-24"
-  },
-  {
     "law": "中华人民共和国民事诉讼法",
     "file": "civil-procedure.html",
     "url": "https://cicc.court.gov.cn/html/1/218/62/83/443.html",
@@ -382,14 +374,6 @@
     "url": "https://www.court.gov.cn/fabu/xiangqing/282101.html",
     "organization": "最高人民法院",
     "sha256": "166220cea1f0be114313a1ca7f41370f99e0869ead263091a5467b1a43076e60",
-    "downloadedAt": "2026-09-26"
-  },
-  {
-    "law": "最高人民法院关于审理预付式消费民事纠纷案件适用法律若干问题的解释",
-    "file": "prepaid-consumption-interpretation.html",
-    "url": "https://www.court.gov.cn/zixun/xiangqing/459321.html",
-    "organization": "最高人民法院",
-    "sha256": "30da32112299acf06e911511669552de5056e341775c074bfbf24530c3230fe3",
     "downloadedAt": "2026-09-26"
   },
   {

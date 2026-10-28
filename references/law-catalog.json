@@ -308,27 +308,6 @@
     "documentType": "法律"
   },
   {
-    "name": "中华人民共和国社会保险法",
-    "slug": "social-insurance-law",
-    "aliases": [
-      "社会保险法",
-      "社保法",
-      "养老保险",
-      "医疗保险",
-      "工伤保险",
-      "失业保险",
-      "生育保险"
-    ],
-    "articleCount": 98,
-    "baseArticleMax": 98,
-    "version": "2010年通过，2018年修正",
-    "effective": "现行文本（2018年修正）",
-    "files": [
-      "references/法律法规/中华人民共和国社会保险法.md"
-    ],
-    "documentType": "法律"
-  },
-  {
     "name": "最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（二）",
     "slug": "construction-contract-interpretation-2",
     "documentType": "司法解释",
@@ -1278,23 +1257,6 @@
     "effective": "自2021年1月1日起施行",
     "files": [
       "references/司法解释/最高人民法院关于适用〈中华人民共和国民法典〉物权编的解释（一）.md"
-    ]
-  },
-  {
-    "name": "最高人民法院关于审理预付式消费民事纠纷案件适用法律若干问题的解释",
-    "slug": "prepaid-consumption-disputes-interpretation",
-    "documentType": "司法解释",
-    "aliases": [
-      "预付式消费司法解释",
-      "预付消费解释",
-      "预付卡消费解释"
-    ],
-    "articleCount": 27,
-    "baseArticleMax": 27,
-    "version": "法释〔2025〕4号",
-    "effective": "自2025年5月1日起施行",
-    "files": [
-      "references/司法解释/最高人民法院关于审理预付式消费民事纠纷案件适用法律若干问题的解释.md"
     ]
   },
   {

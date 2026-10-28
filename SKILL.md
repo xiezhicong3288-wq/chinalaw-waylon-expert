@@ -1,6 +1,7 @@
 ---
 name: chinalaw-waylon-expert
 description: Retrieve and analyze Chinese law. Use for legal research, evidence, deadlines, remedies, and case strategy.
+description_zh: 中国法律检索与案件分析助手
 ---
 
 # Waylon 中国法律案件工作台
@@ -19,7 +20,7 @@ description: Retrieve and analyze Chinese law. Use for legal research, evidence,
 
 ## 按任务加载
 
-只读取本次问题需要的内容；同一任务已读且未变更的资料不重复加载。检索脚本可直接执行，无需先读取脚本源码、完整目录或统一索引。找不到依据、涉及特别法或法律关系不明时再扩大范围，不能为速度省略必要法源。
+只读取本次问题需要的内容；同一任务已读且未变更的资料不重复加载。已知法律和条号时直接检索该条；关键词先限定相关法律并取少量候选，未找到充分依据再扩大范围。检索脚本可直接执行，无需先读取脚本源码、完整目录或统一索引；不能为速度省略必要法源。
 
 | 当前任务 | 读取或执行 |
 |---|---|
@@ -46,11 +47,11 @@ description: Retrieve and analyze Chinese law. Use for legal research, evidence,
 ./scripts/run.ps1 search_law.py --law 刑法 --article 133 --suffix 1
 ./scripts/run.ps1 search_law.py --law 市场监管处罚程序 --article 18
 ./scripts/run.ps1 search_law.py --law 民事证据规定 --keyword 电子数据 --limit 5
-./scripts/run.ps1 search_law.py --keyword 举证责任 --limit 10
+./scripts/run.ps1 search_law.py --keyword 举证责任 --limit 5
 ./scripts/run.ps1 search_commercial_authorities.py --keyword 公司法 --limit 5
 ```
 
-脚本用 [法律目录](references/law-catalog.json) 识别名称、别名与版本，以 [统一索引](references/law-index.json) 定位 Markdown 原文。首查自动创建可重建的本地缓存，资料变更后自动失效；缓存不可用时回退原始检索。用 `--no-cache` 跳过缓存，或 `--rebuild-cache` 强制重建。检索维护说明见 [检索性能](references/workflows/search-performance.md)。
+脚本用 [法律目录](references/law-catalog.json) 识别名称、别名与版本，以 [统一索引](references/law-index.json) 定位 Markdown 原文。精确条号查询直接读索引和原文；关键词检索复用可重建的本地缓存，资料变更后自动失效。缓存不可用时回退原始检索；`--no-cache` 跳过缓存，`--rebuild-cache` 强制重建。检索维护说明见 [检索性能](references/workflows/search-performance.md)。
 
 条号查询输出从 Markdown 提取的完整条文；关键词输出只是候选摘要，引用前须读取完整条文、相邻条文及必要的特别规定。附法律名称、条号、版本与原文文件路径。条号缺少法律名称且上下文无法唯一确定时先澄清；未命中或原文缺失须明确说明，不能凭记忆补写。缓存、索引和本地快照都不证明当前效力或个案适用性。
 

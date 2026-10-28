@@ -81,7 +81,9 @@ def article_text(relative_file: str, article_cn: str) -> str:
 
 def query_candidates(law_slugs: set[str], article=None, suffix=None, needles=(),
                      use_cache=True, rebuild=False, all_laws=False) -> list[dict]:
-    if use_cache:
+    # Exact article lookups are cheap in the JSON index; building or checking
+    # the full-text cache for one article only adds startup cost.
+    if use_cache and (article is None or rebuild):
         connection = None
         try:
             connection = open_cache(ROOT, lambda: load_json("law-index.json"), file_articles,

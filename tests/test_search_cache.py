@@ -79,9 +79,15 @@ class SearchCacheTests(unittest.TestCase):
         self.assertEqual(self.cli('--law', '测试', '--article', '1', '--no-cache').returncode, 0)
         self.assertFalse(self.db.exists())
 
+    def test_exact_article_does_not_build_keyword_cache(self):
+        self.assertEqual(self.cli('--law', '测试', '--article', '1').returncode, 0)
+        self.assertFalse(self.db.exists())
+        self.assertEqual(self.cli('--law', '测试', '--article', '1', '--rebuild-cache').returncode, 0)
+        self.assertTrue(self.db.exists())
+
     def test_cache_directory_unavailable_falls_back(self):
         (self.root / '.cache').write_text('blocks cache directory', encoding='utf-8')
-        result = self.cli('--law', '测试', '--article', '1')
+        result = self.cli('--keyword', '电子数据')
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn('电子数据', result.stdout)
         self.assertIn('改用原文检索', result.stderr)

@@ -99,10 +99,10 @@ class RetrievalTests(unittest.TestCase):
                 self.assertNotEqual(self.cli(*args).returncode, 0)
 
     def test_keyword_scoping(self):
-        result = self.cli("--law", "社会保险法", "--keyword", "骗取", "--limit", "2")
+        result = self.cli("--law", "公司法", "--keyword", "股东", "--limit", "2")
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn("第八十七条", result.stdout)
-        self.assertIn("第八十八条", result.stdout)
+        self.assertIn("中华人民共和国公司法", result.stdout)
+        self.assertEqual(result.stdout.count(" | references/"), 2)
         self.assertNotIn("中华人民共和国刑法", result.stdout)
 
     def test_no_query_must_fail(self):
@@ -539,20 +539,15 @@ class RetrievalTests(unittest.TestCase):
         self.assertIn("转让合同被认定无效", invalid_contract)
         self.assertEqual(choose_laws("物权编解释一", self.catalog), {"civil-code-property-book-interpretation-1"})
 
-    def test_prepaid_consumption_rules_cover_identity_refund_fraud_and_evidence(self):
-        borrowed_name = self.get_article("prepaid-consumption-disputes-interpretation", 4)
-        unfair_terms = self.get_article("prepaid-consumption-disputes-interpretation", 9)
-        cooling_off = self.get_article("prepaid-consumption-disputes-interpretation", 14)
-        refund = self.get_article("prepaid-consumption-disputes-interpretation", 15)
-        fraud = self.get_article("prepaid-consumption-disputes-interpretation", 23)
-        evidence = self.get_article("prepaid-consumption-disputes-interpretation", 25)
-        self.assertIn("允许他人使用其营业执照", borrowed_name)
-        self.assertIn("排除消费者依法解除合同或者请求返还预付款的权利", unfair_terms)
-        self.assertIn("七日内请求经营者返还预付款本金", cooling_off)
-        self.assertIn("返还剩余预付款并支付利息", refund)
-        self.assertIn("恶意逃避消费者申请退款", fraud)
-        self.assertIn("无正当理由拒不提交", evidence)
-        self.assertEqual(choose_laws("预付式消费司法解释", self.catalog), {"prepaid-consumption-disputes-interpretation"})
+    def test_removed_authorities_are_not_searchable(self):
+        removed = {"social-insurance-law", "prepaid-consumption-disputes-interpretation"}
+        self.assertFalse(removed & {item["slug"] for item in self.catalog})
+        self.assertFalse(removed & {item["lawSlug"] for item in self.index})
+        for query in ("社会保险法", "预付式消费司法解释"):
+            with self.subTest(query=query):
+                result = self.cli("--law", query, "--article", "1")
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIn("未识别法律", result.stderr)
 
     def test_new_authority_aliases(self):
         self.assertEqual(choose_laws("民诉法", self.catalog), {"civil-procedure-law"})

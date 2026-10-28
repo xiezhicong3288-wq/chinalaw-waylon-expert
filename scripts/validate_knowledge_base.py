@@ -29,7 +29,7 @@ def main() -> None:
         key, separator, value = line.partition(":")
         assert separator, f"invalid frontmatter line: {line}"
         fields[key.strip()] = value.strip()
-    assert set(fields) == {"name", "description"}, f"unexpected frontmatter keys: {set(fields)}"
+    assert set(fields) == {"name", "description", "description_zh"}, f"unexpected frontmatter keys: {set(fields)}"
     assert re.fullmatch(r"[a-z0-9-]{1,64}", fields["name"]), "invalid skill name"
     assert 1 <= len(fields["description"]) <= 1024, "invalid skill description length"
     assert "<" not in fields["description"] and ">" not in fields["description"], "angle brackets in description"
@@ -43,7 +43,7 @@ def main() -> None:
         "中华人民共和国行政诉讼法", "中华人民共和国行政复议法",
         "中华人民共和国行政处罚法", "中华人民共和国公司法",
         "中华人民共和国仲裁法", "中华人民共和国劳动法",
-        "中华人民共和国劳动合同法", "中华人民共和国社会保险法",
+        "中华人民共和国劳动合同法",
         "中华人民共和国反垄断法", "中华人民共和国反不正当竞争法",
         "中华人民共和国消费者权益保护法", "中华人民共和国企业破产法",
         "中华人民共和国票据法", "中华人民共和国保险法",
@@ -100,7 +100,6 @@ def main() -> None:
         "公司登记管理实施办法",
         "市场监督管理行政处罚程序规定",
         "最高人民法院关于适用〈中华人民共和国民法典〉物权编的解释（一）",
-        "最高人民法院关于审理预付式消费民事纠纷案件适用法律若干问题的解释",
     }
     assert {item["name"] for item in catalog} == required, "authority catalog is incomplete or unexpected"
     expected_records = sum(item["articleCount"] for item in catalog)
@@ -380,7 +379,7 @@ def main() -> None:
     assert "扫一扫在手机打开当前页" not in anti_monopoly and "网站标识码" not in anti_monopoly
 
     document_counts = Counter(item.get("documentType", "法律") for item in catalog)
-    assert document_counts == {"法律": 23, "司法解释": 48, "行政法规": 1, "部门规章": 3}
+    assert document_counts == {"法律": 22, "司法解释": 47, "行政法规": 1, "部门规章": 3}
     print(f"知识库结构校验通过：{document_counts['法律']}部法律、{document_counts['司法解释']}部司法解释、{document_counts['行政法规']}部行政法规、{document_counts['部门规章']}部部门规章，{len(index):,}条完整可提取记录，{len(cases)}个案例卡、{len(archetypes)}类案件原型、{len(failure_numbers)}类失败模式、{len(practice_files)}份通用办案工作流、{len(commercial_files)}份商事工作流、{len(patterns)}类商事决策模式、{len(authorities)}项商事权威法源；不代表法律适用正确性认证。")
 
 
